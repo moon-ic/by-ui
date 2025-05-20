@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
-import App from './App.vue';
+import App from './app.vue';
 import ByUI from '../packages/index';
-// import '../src/styles/index.less';
+import '../packages/styles/index.scss';
 
 const app = createApp(App);
 app.use(ByUI);

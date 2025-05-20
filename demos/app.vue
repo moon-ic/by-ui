@@ -1,24 +1,19 @@
 <template>
     <div id="app">
-        <h1>My App</h1>
-        <Button type="success" size="large" @click="handleClick">Click Me</Button>
+        <Button type="secondary" size="large" @click="handleClick">Click Me</Button>
         <Button type="danger" size="small" @click="handleClick">Delete</Button>
-        <Button type="info" size="medium" @click="handleClick">Info</Button>
+        <Button @click="handleClick">Primary</Button>
+        <Button @click="handleClick" disabled>Primary</Button>
     </div>
 </template>
 
-<script>
+<script setup>
     import { Button } from '../packages/index.js';
 
-    export default {
-        name: 'App',
-        components: { Button },
-        methods: {
-            handleClick(event) {
-                console.log('Button clicked:', event);
-            }
-        }
-    }
+    const handleClick = (event) => {
+        console.log('Button clicked!', event);
+    };
+
 </script>
 
 <style scoped>
