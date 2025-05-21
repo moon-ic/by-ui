@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-  const { size = '24' } = defineProps<{
+  const { size = '20' } = defineProps<{
     size?: string;
   }>();
 </script>

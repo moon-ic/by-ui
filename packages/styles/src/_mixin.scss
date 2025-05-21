@@ -26,3 +26,19 @@
 		border-color: $border;
 	}
 }
+
+@mixin dialog-type($color,$background) {
+	.by-dialog-header {
+        background-color: $color;
+        color: $background;
+        .close {
+            &:hover {
+                background: darken($color, 7%);
+            }
+            &:active,
+            &.active {
+                background: darken($color, 5%);
+            }
+        }
+    }
+}
