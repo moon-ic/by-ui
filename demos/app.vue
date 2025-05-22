@@ -5,7 +5,7 @@
         <Button @click="handleClick">Primary</Button>
         <Button @click="handleClick" disabled>Primary</Button>
          <div>身如柳絮随风扬，无论云泥意贯一</div>
-        <Dialog type="danger" style="margin: 50px;">
+        <!-- <Dialog type="danger" style="margin: 50px;">
             <div>身如柳絮随风扬，无论云泥意贯一</div>
             <div>身如柳絮随风扬，无论云泥意贯一</div>
             <div>身如柳絮随风扬，无论云泥意贯一</div>
@@ -14,13 +14,19 @@
             <div>身如柳絮随风扬，无论云泥意贯一</div>
             <div>身如柳絮随风扬，无论云泥意贯一</div>
             <div>身如柳絮随风扬，无论云泥意贯一</div>
-        </Dialog>
+        </Dialog> -->
     </div>
 </template>
 
 <script setup>
-    import { Button } from '../packages/index.js';
-    import { Dialog } from '../packages/index.js';
+    import { Button } from './index.js';
+    import { Dialog } from './index.js';
+    import { openDialog } from '@/components/dialog/api.ts'
+
+    openDialog('提示内容', {
+        title: '提示',
+        type: 'danger',
+    });
 
     const handleClick = (event) => {
         console.log('Button clicked!', event);

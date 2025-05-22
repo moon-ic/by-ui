@@ -1,6 +1,7 @@
 <template>
     <div class="by-dialog"
         :class="[`by-dialog-${type}`]"
+        :visibles
         v-if="visibles"
     >
         <div class="by-dialog-header">

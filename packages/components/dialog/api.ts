@@ -1,7 +1,7 @@
 import { createApp, h, ref } from 'vue'
 import Dialog from './index.vue'
 
-export const openDialog = (content: string) => {
+export const openDialog = (content: string, props: any) => {
   const container = document.createElement('div')
   document.body.appendChild(container)
 
@@ -21,7 +21,7 @@ export const openDialog = (content: string) => {
         },
         () => content);
     }
-  })
+  }, props);
 
   app.mount(container)
 }
