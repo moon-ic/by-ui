@@ -27,17 +27,19 @@
 	}
 }
 
-@mixin dialog-type($color,$background) {
+@mixin dialog-type($color, $font) {
 	.by-dialog-header {
         background-color: $color;
-        color: $background;
+        color: $font;
         .close {
             &:hover {
-                background: darken($color, 7%);
+                background-color: darken($color, 7%);
+				color: darken($font, 7%);
             }
             &:active,
             &.active {
-                background: darken($color, 5%);
+                background-color: darken($color, 5%);
+				color: darken($font, 5%);
             }
         }
     }

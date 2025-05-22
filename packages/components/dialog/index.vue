@@ -4,16 +4,16 @@
         v-if="visibles"
     >
         <div class="by-dialog-header">
-            <slot class="header-name">{{title}}</slot>
             <IconError v-if="type === 'danger'" />
             <IconWarning v-if="type === 'warning'" />
             <IconSuccess v-if="type === 'success'" />
+            <div class="header-name">{{title}}</div>
             <div class="close">
                 <IconClose class="dialog-close-icon" @click="closeDialog()" />
             </div>
         </div>
         <div class="by-dialog-body">
-            <slot name="body">{{body}}</slot>
+            <slot></slot>
         </div>
         <div class="by-dialog-footer">
             <slot name="footer">
@@ -22,6 +22,7 @@
             </slot>
         </div>
     </div>
+    <div v-if="visibles" class="dialog-mask" />
 </template>
 
 <script setup lang="ts">
@@ -34,7 +35,6 @@ import { ref } from 'vue';
 interface Props {
   type?: string
   title?: string
-  body?: string
   isConfirmButton?: boolean
   isCancelButton?: boolean
   confirmButtonText?: string
@@ -47,7 +47,6 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   type: 'default',
   title: '标题',
-  body: '内容',
   isConfirmButton: true,
   isCancelButton: true,
   confirmButtonText: '确定',
@@ -76,34 +75,38 @@ const cancel = () => {
 @import '../../styles/index.scss';
 
 .by-dialog {
+    position: fixed;
+    z-index: 10000;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 350px;
     background-color: $white-color;;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 
     &-header {
         width: 320px;
-        padding: 15px;
+        padding: 12px 15px;
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        gap: 5px;
+        gap: 3px;
         .close{
             position: absolute;
             right: 4px;
             top: 5px;
             width: 20px;
             height: 20px;
-            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -116,6 +119,9 @@ const cancel = () => {
         text-align: center;
         flex-grow: 1;
         color: $dark-color;
+        min-height: 200px;
+        max-height: 400px;
+        overflow: scroll;
     }
 
     &-footer {
@@ -126,10 +132,20 @@ const cancel = () => {
         text-align: right;
 
         button {
-            margin: 0 8px;
-            padding: 7px 30px;
+            margin: 0 10px;
+            padding: 7px 40px;
         }
     }
+}
+
+.dialog-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
 
 .by-dialog-default {

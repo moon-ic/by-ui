@@ -1,13 +1,20 @@
 <template>
     <div id="app">
-        <!-- <Button type="secondary" size="large" @click="handleClick">Click Me</Button>
+        <Button type="secondary" size="large" @click="handleClick">Click Me</Button>
         <Button type="danger" size="small" @click="handleClick">Delete</Button>
         <Button @click="handleClick">Primary</Button>
-        <Button @click="handleClick" disabled>Primary</Button> -->
-        <Dialog style="margin: 50px;" body="你好沙发排队发货实拍回复i哈u怕死回复哈佛后去皮"></Dialog>
-        <Dialog type="danger"  style="margin: 50px;"></Dialog>
-        <Dialog type="success" confirmButtonText="ofausf2qifyeqiwyehpi" style="margin: 50px;" :confirmCallback="onConfirm"></Dialog>
-        <Dialog type="warning"  style="margin: 50px;"></Dialog>
+        <Button @click="handleClick" disabled>Primary</Button>
+         <div>身如柳絮随风扬，无论云泥意贯一</div>
+        <Dialog type="danger" style="margin: 50px;">
+            <div>身如柳絮随风扬，无论云泥意贯一</div>
+            <div>身如柳絮随风扬，无论云泥意贯一</div>
+            <div>身如柳絮随风扬，无论云泥意贯一</div>
+            <div>身如柳絮随风扬，无论云泥意贯一...........</div>
+            <div>身如柳絮随风扬，无论云泥意贯一</div>
+            <div>身如柳絮随风扬，无论云泥意贯一</div>
+            <div>身如柳絮随风扬，无论云泥意贯一</div>
+            <div>身如柳絮随风扬，无论云泥意贯一</div>
+        </Dialog>
     </div>
 </template>
 
@@ -24,6 +31,8 @@
     };
 
 </script>
-
+#app {
+    overflow: hidden;
+}
 <style scoped>
 </style>

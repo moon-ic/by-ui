@@ -68,7 +68,14 @@ const emit = defineEmits(['click']);
     @include button-style($danger-color, $danger-color, $light-color);
 }
 .by-btn-secondary {
-    @include button-style($secondary-color, $secondary-color, $light-color);
+    @include button-style($white-color, $primary-color, $primary-color);
+	&:hover {
+		background: darken($white-color, 2%);
+	}
+	&:active,
+	&.active {
+		background: darken($white-color, 1%);
+	}
 }
 
 .by-btn-small {
