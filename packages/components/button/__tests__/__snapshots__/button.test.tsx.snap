@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button Component > should render correctly with default props 1`] = `
+<button
+  class="by-btn by-btn-primary by-btn-small"
+  data-v-76618e17=""
+>
+  
+  
+</button>
+`;

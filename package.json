@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview",
+    "test": "vitest --coverage",
     "reInstall": "pnpm --filter docs i @by-ui/components --workspace"
   },
   "dependencies": {
@@ -15,9 +15,13 @@
   "devDependencies": {
     "@types/node": "^22.15.19",
     "@vitejs/plugin-vue": "^5.2.3",
+    "@vitest/coverage-v8": "3.1.4",
     "@vue/runtime-dom": "^3.5.14",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^26.1.0",
     "sass-embedded": "^1.89.0",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vitest": "^3.1.4"
   }
 }
