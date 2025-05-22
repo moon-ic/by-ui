@@ -26,7 +26,7 @@ const emit = defineEmits(['click']);
 </script>
 
 <style scoped lang="scss">
-@import '../../styles/index.scss';
+@import '../base/styles/index.scss';
 
 .by-btn {
     position: relative;

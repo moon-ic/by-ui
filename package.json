@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "reInstall": "pnpm --filter demos i @by-ui/components --workspace"
   },
   "dependencies": {
     "vue": "^3.5.13"

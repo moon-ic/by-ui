@@ -1,0 +1,14 @@
+{
+  "name": "@by-ui/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "module": "index.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.0",
+  "dependencies": {
+    "demos": "workspace:*"
+  }
+}

@@ -19,9 +19,9 @@
 </template>
 
 <script setup>
-    import { Button } from './index.js';
-    import { Dialog } from './index.js';
-    import { openDialog } from '@/components/dialog/api.ts'
+    import { Button } from '@by-ui/components';
+    import { Dialog } from '@by-ui/components';
+    import { openDialog } from '@by-ui/components'
 
     openDialog('提示内容', {
         title: '提示',

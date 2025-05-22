@@ -27,11 +27,11 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from '@/index';
-import IconClose from '@/assets/svg/close.vue';
-import IconWarning from '@/assets/svg/warning.vue';
-import IconSuccess from '@/assets/svg/success.vue';
-import IconError from '@/assets/svg/error.vue';
+import Button from '@/components/button/index.vue';
+import IconClose from '@/components/base/assets/svg/close.vue';
+import IconWarning from '@/components/base/assets/svg/warning.vue';
+import IconSuccess from '@/components/base/assets/svg/success.vue';
+import IconError from '@/components/base/assets/svg/error.vue';
 import { ref } from 'vue';
 interface Props {
   type?: string
@@ -73,7 +73,7 @@ const cancel = () => {
 </script>
 
 <style scoped lang="scss">
-@import '../../styles/index.scss';
+@import '../base/styles/index.scss';
 
 .by-dialog {
     position: fixed;
