@@ -11,11 +11,7 @@
 </template>
 
 <script setup lang="ts">
-interface ButtonProps {
-    type?: 'primary' | 'danger' | 'secondary' | 'default';
-    size?: 'small' | 'large';
-    disabled?: boolean;
-}
+import { ButtonProps } from './src/button-type';
 const props = withDefaults(defineProps<ButtonProps>(), {
     type: 'primary',
     size: 'small',
