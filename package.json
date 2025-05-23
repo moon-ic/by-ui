@@ -10,24 +10,52 @@
     "reInstall": "pnpm --filter docs i @by-ui/components --workspace",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "@vuepress/bundler-vite": "2.0.0-rc.23",
-    "@vuepress/theme-default": "2.0.0-rc.105",
-    "vuepress": "2.0.0-rc.23"
+    "lint": "eslint --ext .tsx,.ts,.vue .",
+    "lint:fix": "eslint --fix --ext .tsx,.ts,.vue .",
+    "prettier": "prettier --write .",
+    "prepare": "husky"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^19.8.1",
     "@types/node": "^22.15.19",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vitest/coverage-v8": "3.1.4",
     "@vue/runtime-dom": "^3.5.14",
     "@vue/test-utils": "^2.4.6",
+    "commitlint": "^19.8.1",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-vue": "^10.1.0",
+    "husky": "^9.1.7",
     "jsdom": "^26.1.0",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
     "sass-embedded": "^1.89.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vitepress": "^1.6.3",
-    "vitest": "^3.1.4"
+    "vitest": "^3.1.4",
+    "@vuepress/bundler-vite": "2.0.0-rc.23",
+    "@vuepress/theme-default": "2.0.0-rc.105",
+    "vuepress": "2.0.0-rc.23"
   }
 }
