@@ -28,6 +28,6 @@ export default defineConfig({
     }
   },
   server: {
-    open: './docs/index.html'
+    open: './docs/components/demos/index.html'
   }
 })
