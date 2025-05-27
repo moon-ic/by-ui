@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonProps } from './src/button-type';
+import { ButtonProps } from './src/props';
 const props = withDefaults(defineProps<ButtonProps>(), {
     type: 'primary',
     size: 'small',
@@ -63,7 +63,7 @@ const emit = defineEmits(['click']);
 .by-btn-danger {
     @include button-style($danger-color, $danger-color, $light-color);
 }
-.by-btn-secondary {
+.by-btn-default {
     @include button-style($white-color, $primary-color, $primary-color);
 	&:hover {
 		background: darken($white-color, 2%);

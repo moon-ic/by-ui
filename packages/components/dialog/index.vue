@@ -19,7 +19,7 @@
         <div class="by-dialog-footer">
             <slot name="footer">
                 <Button v-if="isConfirmButton" type="primary" @click="confirm()">{{confirmButtonText}}</Button>
-                <Button v-if="isCancelButton" type="secondary" @click="cancel()">{{cancelButtonText}}</Button>
+                <Button v-if="isCancelButton" type="default" @click="cancel()">{{cancelButtonText}}</Button>
             </slot>
         </div>
     </div>
@@ -154,9 +154,6 @@ const cancel = () => {
 }
 .by-dialog-danger {
     @include dialog-type($danger-color, $white-color);
-}
-.by-dialog-info {
-     @include dialog-type($info-color, $white-color);
 }
 .by-dialog-success {
      @include dialog-type($success-color, $white-color);

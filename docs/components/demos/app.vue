@@ -1,40 +1,11 @@
 <template>
     <div id="app">
-        <Button type="secondary" size="large" @click="handleClick">Click Me</Button>
-        <Button type="danger" size="small" @click="handleClick">Delete</Button>
-        <Button @click="handleClick">Primary</Button>
-        <Button @click="handleClick" disabled>Primary</Button>
-         <div>身如柳絮随风扬，无论云泥意贯一</div>
-        <!-- <Dialog type="danger" style="margin: 50px;">
-            <div>身如柳絮随风扬，无论云泥意贯一</div>
-            <div>身如柳絮随风扬，无论云泥意贯一</div>
-            <div>身如柳絮随风扬，无论云泥意贯一</div>
-            <div>身如柳絮随风扬，无论云泥意贯一...........</div>
-            <div>身如柳絮随风扬，无论云泥意贯一</div>
-            <div>身如柳絮随风扬，无论云泥意贯一</div>
-            <div>身如柳絮随风扬，无论云泥意贯一</div>
-            <div>身如柳絮随风扬，无论云泥意贯一</div>
-        </Dialog> -->
+        <ButtonDemo1 />
     </div>
 </template>
 
 <script setup>
-    import { Button } from '@by-ui/components';
-    import { Dialog } from '@by-ui/components';
-    import { openDialog } from '@by-ui/components'
-
-    openDialog('提示内容', {
-        title: '提示',
-        type: 'danger',
-    });
-
-    const handleClick = (event) => {
-        console.log('Button clicked!', event);
-    };
-
-    const onConfirm = () => {
-        console.log("nihao");
-    };
+    import ButtonDemo1 from './button/demo1.vue';
 
 </script>
 #app {
