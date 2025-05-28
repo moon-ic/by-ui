@@ -1,7 +1,8 @@
 <template>
-    <div >
+    <div class="button-demo">
         <Button type="default" size="large" @click="handleClick">Click Me</Button>
-        <Button type="danger" size="small" @click="handleClick">Delete</Button>
+        <Button type="danger" size="large" @click="handleClick">Delete</Button>
+        <Button type="warn" size="small" @click="handleClick">Delete</Button>
         <Button @click="handleClick">Primary</Button>
         <Button @click="handleClick" disabled>Primary</Button>
     </div>
@@ -19,4 +20,8 @@
 
 </script>
 <style scoped>
+.button-demo {
+    display: flex;
+    gap: 10px;
+}
 </style>

@@ -159,6 +159,6 @@ const cancel = () => {
      @include dialog-type($success-color, $white-color);
 }
 .by-dialog-warning {
-     @include dialog-type($warning-color, $white-color);
+     @include dialog-type($warn-color, $white-color);
 }
 </style>

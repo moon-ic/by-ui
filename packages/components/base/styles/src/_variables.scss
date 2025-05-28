@@ -7,10 +7,17 @@ $secondary-color: #6c757da7 !default;
 // 成功色
 $success-color: #52c41a !default;
 // 警告色
-$warning-color: #f8da14 !default;
+$warn-color: #f8da14 !default;
 // 危险色
 $danger-color: #dc3545 !default;
 // 基础色
 $light-color: #f8f9fa !default;
+$light-primary-color: #0d6dfd33 !default;
 $dark-color: #343a40 !default;
 $white-color: #ffffff !default;
+
+$btn-transition:
+	color 0.15s ease-in-out,
+	background-color 0.15s ease-in-out,
+	border-color 0.15s ease-in-out,
+	box-shadow 0.15s ease-in-out !default;

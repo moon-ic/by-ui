@@ -56,6 +56,17 @@ const emit = defineEmits(['click']);
 			pointer-events: none;
 		}
 	}
+	transition: $btn-transition;
+}
+.by-btn-default {
+	@include button-style($white-color, $primary-color, $primary-color);
+	&:hover {
+		background-color: $white-color;
+	}
+	&:active,
+	&.active {
+		background-color: $white-color;
+	}
 }
 .by-btn-primary {
     @include button-style($primary-color, $primary-color, $light-color);
@@ -63,15 +74,8 @@ const emit = defineEmits(['click']);
 .by-btn-danger {
     @include button-style($danger-color, $danger-color, $light-color);
 }
-.by-btn-default {
-    @include button-style($white-color, $primary-color, $primary-color);
-	&:hover {
-		background: darken($white-color, 2%);
-	}
-	&:active,
-	&.active {
-		background: darken($white-color, 1%);
-	}
+.by-btn-warn {
+    @include button-style($warn-color, $warn-color, $light-color);
 }
 
 .by-btn-small {

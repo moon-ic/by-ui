@@ -7,9 +7,9 @@ export type ButtonSize = 'small' | 'meddle' | 'large';
 
 export interface ButtonProps {
     /**
-     * 按钮类型 'primary'品牌 |'danger'危险 | 'secondary'次级 | 'default'默认;
+     * 按钮类型
      *
-     * @values
+     * @values 'primary'品牌 |'danger'危险 | 'secondary'次级 | 'default'默认;
      */
     type?: ButtonType;
     /**
