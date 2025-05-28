@@ -53,9 +53,6 @@
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vitepress": "^1.6.3",
-    "vitest": "^3.1.4",
-    "@vuepress/bundler-vite": "2.0.0-rc.23",
-    "@vuepress/theme-default": "2.0.0-rc.105",
-    "vuepress": "2.0.0-rc.23"
+    "vitest": "^3.1.4"
   }
 }
