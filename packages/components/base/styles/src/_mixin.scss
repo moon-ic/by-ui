@@ -30,21 +30,3 @@
 		border-color: $border;
 	}
 }
-
-@mixin dialog-type($color, $font) {
-	.by-dialog-header {
-        background-color: $color;
-        color: $font;
-        .close {
-            &:hover {
-                background-color: darken($color, 7%);
-				color: darken($font, 7%);
-            }
-            &:active,
-            &.active {
-                background-color: darken($color, 5%);
-				color: darken($font, 5%);
-            }
-        }
-    }
-}

@@ -5,7 +5,7 @@
                 `by-btn-${size}`
             ]"
             :disabled="disabled"
-            @click="emit('click')">
+            @click="handleClick()">
         <slot />
     </button>
 </template>
@@ -19,6 +19,12 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 });
 
 const emit = defineEmits(['click']);
+
+const handleClick = () => {
+	if (!props.disabled) {
+		emit('click');
+	}
+};
 </script>
 
 <style scoped lang="scss">
@@ -38,6 +44,8 @@ const emit = defineEmits(['click']);
 	box-shadow: inset 0 1px 0 rgba($light-color, 0.15),
 	0 1px 1px rgba($light-color, 0.075);
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
 
     @include button-size(
 		0.375rem,
@@ -83,7 +91,7 @@ const emit = defineEmits(['click']);
 		5px,
 		10px,
 		14px,
-		5px
+		3px
 	);
 }
 .by-btn-large {
@@ -91,7 +99,7 @@ const emit = defineEmits(['click']);
 		8px,
 		14px,
 		16px,
-		8px
+		5px
 	);
 }
 </style>

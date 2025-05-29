@@ -1,141 +1,120 @@
 <template>
-    <div class="by-dialog"
-        :class="[`by-dialog-${type}`]"
-        :visibles
-        v-if="visibles"
-    >
+    <div class="by-dialog" :class="[`by-dialog-${type}`]" v-if="visible">
         <div class="by-dialog-header">
+            <IconError size="24" v-if="type === 'info'" />
             <IconError v-if="type === 'danger'" />
             <IconWarning v-if="type === 'warning'" />
             <IconSuccess v-if="type === 'success'" />
-            <div class="header-name">{{title}}</div>
+            <div class="header-name">{{ header }}</div>
             <div class="close">
                 <IconClose class="dialog-close-icon" @click="closeDialog()" />
             </div>
         </div>
         <div class="by-dialog-body">
-            <slot></slot>
+            <slot>{{ body }}</slot>
         </div>
         <div class="by-dialog-footer">
-            <slot name="footer">
-                <Button v-if="isConfirmButton" type="primary" @click="confirm()">{{confirmButtonText}}</Button>
-                <Button v-if="isCancelButton" type="default" @click="cancel()">{{cancelButtonText}}</Button>
-            </slot>
+                <Button v-if="cancelBtn === false" type="default" style="width: 60px" @click="closeDialog()">取消</Button>
+                <Button type="primary" style="width: 60px;" @click="confirm()">确认</Button>
         </div>
     </div>
-    <div v-if="visibles" class="dialog-mask" />
+    <div v-if="visible" class="dialog-mask" />
 </template>
 
 <script setup lang="ts">
-import Button from '@/components/button/index.vue';
+import { DialogProps } from "./src/prop";
 import IconClose from '@/components/base/assets/svg/close.vue';
 import IconWarning from '@/components/base/assets/svg/warning.vue';
 import IconSuccess from '@/components/base/assets/svg/success.vue';
 import IconError from '@/components/base/assets/svg/error.vue';
-import { ref } from 'vue';
-interface Props {
-  type?: string
-  title?: string
-  isConfirmButton?: boolean
-  isCancelButton?: boolean
-  confirmButtonText?: string
-  cancelButtonText?: string
-  confirmCallback?: () => void
-  cancelCallback?: () => void
-  visible?: boolean
-}
+import Button from '@/components/button/index.vue';
 
-const props = withDefaults(defineProps<Props>(), {
-  type: 'default',
-  title: '标题',
-  isConfirmButton: true,
-  isCancelButton: true,
-  confirmButtonText: '确定',
-  cancelButtonText: '取消',
-  confirmCallback: () => {},
-  cancelCallback: () => {},
-  visible: true
-})
-
-
-const visibles = ref(props.visible);
+const props = withDefaults(defineProps<DialogProps>(), {
+    type: "default",
+    visible: true
+});
+const emit = defineEmits(['update:visible','confirm', 'close']);
 const closeDialog = () => {
-    visibles.value = false;
-}
+    emit('update:visible', false);
+    console.log('close');
+    emit('close');
+};
 const confirm = () => {
-    props.confirmCallback();
+    emit('confirm');
     closeDialog();
-}
-const cancel = () => {
-    props.cancelCallback();
-    closeDialog();
-}
+};
 </script>
 
 <style scoped lang="scss">
-@import '../base/styles/index.scss';
+@import "../base/styles/index.scss";
 
 .by-dialog {
     position: fixed;
     z-index: 10000;
-    top: 10%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    background-color: $white-color;;
+    width: 415px;
+    padding: 32px;
+    background-color: $white-color;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: $btn-transition;
 
     &-header {
-        width: 320px;
-        padding: 12px 15px;
-        text-align: center;
+        width: 100%;
+        text-align: left;
         font-size: 16px;
         font-weight: bold;
+        line-height: 30px;
+        color: $dark-color;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: start;
         position: relative;
-        gap: 3px;
+        gap: 8px;
         .close{
             position: absolute;
-            right: 4px;
-            top: 5px;
+            right: 0;
             width: 20px;
             height: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
+            &:hover {
+                background-color: darken($light-color, 5%);
+            }
+            &:active,
+            &.active {
+                background-color: darken($light-color, 10%);
+            }
         }
     }
 
     &-body {
-        width: 320px;
-        padding: 15px;
+        width: 100%;
         text-align: center;
-        flex-grow: 1;
-        color: $dark-color;
-        min-height: 200px;
-        max-height: 400px;
+        min-height: 40px;
+        max-height: 200px;
         overflow: scroll;
+        line-height: 20px;
+        font-size: 14px;
+        color: #888;
+        margin: 10px 0px;
+        overflow-wrap: break-word;
     }
 
     &-footer {
         width: 100%;
         display: flex;
-        justify-content: center;
-        padding: 16px;
-        text-align: right;
-
-        button {
-            margin: 0 10px;
-            padding: 7px 40px;
-        }
+        justify-content: flex-end;
+        gap:10px;
+        align-items: center;
     }
 }
 
@@ -147,18 +126,5 @@ const cancel = () => {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
-}
-
-.by-dialog-default {
-    @include dialog-type($default-color, $dark-color);
-}
-.by-dialog-danger {
-    @include dialog-type($danger-color, $white-color);
-}
-.by-dialog-success {
-     @include dialog-type($success-color, $white-color);
-}
-.by-dialog-warning {
-     @include dialog-type($warn-color, $white-color);
 }
 </style>
