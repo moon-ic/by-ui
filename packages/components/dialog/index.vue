@@ -1,10 +1,12 @@
 <template>
     <div class="by-dialog" :class="[`by-dialog-${type}`]" v-if="visible">
         <div class="by-dialog-header">
-            <IconError size="24" v-if="type === 'info'" />
-            <IconError v-if="type === 'danger'" />
-            <IconWarning v-if="type === 'warning'" />
-            <IconSuccess v-if="type === 'success'" />
+            <div class="iconBox">
+                <IconInfo size="24" v-if="type === 'info'" />
+                <IconError size="24" v-if="type === 'danger'" />
+                <IconWarning size="24" v-if="type === 'warning'" />
+                <IconSuccess size="24" v-if="type === 'success'" />
+            </div>
             <div class="header-name">{{ header }}</div>
             <div class="close">
                 <IconClose class="dialog-close-icon" @click="closeDialog()" />
@@ -23,6 +25,7 @@
 
 <script setup lang="ts">
 import { DialogProps } from "./src/prop";
+import IconInfo from '@/components/base/assets/svg/info.vue';
 import IconClose from '@/components/base/assets/svg/close.vue';
 import IconWarning from '@/components/base/assets/svg/warning.vue';
 import IconSuccess from '@/components/base/assets/svg/success.vue';
@@ -78,6 +81,10 @@ const confirm = () => {
         justify-content: start;
         position: relative;
         gap: 8px;
+        .iconBox{
+            display: flex;
+            align-items: center;
+        }
         .close{
             position: absolute;
             right: 0;
@@ -115,6 +122,27 @@ const confirm = () => {
         justify-content: flex-end;
         gap:10px;
         align-items: center;
+    }
+}
+
+.by-dialog-info {
+    .iconBox{
+        color: $primary-color;
+    }
+}
+.by-dialog-success {
+    .iconBox{
+        color: $success-color;
+    }
+}
+.by-dialog-danger {
+    .iconBox{
+        color: $danger-color;
+    }
+}
+.by-dialog-warning {
+    .iconBox{
+        color: $warn-color;
     }
 }
 

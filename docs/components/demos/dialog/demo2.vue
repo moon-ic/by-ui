@@ -7,8 +7,8 @@
     import { openDialog } from '@by-ui/components'
 
     openDialog('提示内容', {
-        title: '提示',
-        type: 'danger',
+        header: '提示',
+        type: 'info',
     });
 
 </script>
