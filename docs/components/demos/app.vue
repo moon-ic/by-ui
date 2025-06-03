@@ -1,14 +1,16 @@
 <template>
     <div id="app">
-        <ButtonDemo1 />
-        <DialogDemo2 />
+        <!-- <ButtonDemo1 /> -->
+        <!-- <DialogDemo2 /> -->
+        <InputDemo1 />
     </div>
 </template>
 
 <script setup>
-// import ButtonDemo1 from "./button/demo1.vue";
+import ButtonDemo1 from "./button/demo1.vue";
 import DialogDemo1 from "./dialog/demo1.vue";
 import DialogDemo2 from "./dialog/demo2.vue";
+import InputDemo1 from "./input/demo1.vue";
 </script>
 
 <style scoped>
