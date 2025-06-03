@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <!-- <ButtonDemo1 /> -->
-        <!-- <DialogDemo2 /> -->
-        <InputDemo1 />
+        <DialogDemo2 />
+        <!-- <InputDemo1 /> -->
     </div>
 </template>
 

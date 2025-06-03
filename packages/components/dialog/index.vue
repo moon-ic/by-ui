@@ -16,8 +16,8 @@
             <slot>{{ body }}</slot>
         </div>
         <div class="by-dialog-footer">
-                <Button v-if="cancelBtn === false" type="default" style="width: 60px" @click="close()">取消</Button>
-                <Button type="primary" style="width: 60px;" @click="confirm()">确认</Button>
+            <Button v-if="cancelBtn === false" type="default" style="width: 60px" @click="close()">取消</Button>
+            <Button type="primary" style="width: 60px" @click="confirm()">确认</Button>
         </div>
     </div>
     <div v-if="visible" class="dialog-mask" />
@@ -26,32 +26,33 @@
 <script setup lang="ts">
 import { DialogProps } from "./src/prop";
 
-import IconInfo from '@/components/base/assets/svg/info.vue';
-import IconClose from '@/components/base/assets/svg/close.vue';
-import IconWarning from '@/components/base/assets/svg/warning.vue';
-import IconSuccess from '@/components/base/assets/svg/success.vue';
-import IconError from '@/components/base/assets/svg/error.vue';
+import IconInfo from "@/components/base/assets/svg/info.vue";
+import IconClose from "@/components/base/assets/svg/close.vue";
+import IconWarning from "@/components/base/assets/svg/warning.vue";
+import IconSuccess from "@/components/base/assets/svg/success.vue";
+import IconError from "@/components/base/assets/svg/error.vue";
 
-import Button from '@/components/button/index.vue';
+import Button from "@/components/button/index.vue";
 import { computed } from "vue";
 
 const props = withDefaults(defineProps<DialogProps>(), {
     type: "default",
     visible: true
 });
-const emit = defineEmits(['update:visible','confirm', 'close']);
+const emit = defineEmits(["update:visible", "confirm", "close"]);
 
 const closeDialog = () => {
-    emit('update:visible', false);
+    emit("update:visible", false);
+    console.log("closeDialog");
 };
 const confirm = () => {
-    emit('confirm');
+    emit("confirm");
     closeDialog();
 };
 const close = () => {
-    emit('close');
+    emit("close");
     closeDialog();
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -87,11 +88,11 @@ const close = () => {
         justify-content: start;
         position: relative;
         gap: 8px;
-        .iconBox{
+        .iconBox {
             display: flex;
             align-items: center;
         }
-        .close{
+        .close {
             position: absolute;
             right: 0;
             width: 20px;
@@ -126,28 +127,28 @@ const close = () => {
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        gap:10px;
+        gap: 10px;
         align-items: center;
     }
 }
 
 .by-dialog-info {
-    .iconBox{
+    .iconBox {
         color: $primary-color;
     }
 }
 .by-dialog-success {
-    .iconBox{
+    .iconBox {
         color: $success-color;
     }
 }
 .by-dialog-danger {
-    .iconBox{
+    .iconBox {
         color: $danger-color;
     }
 }
 .by-dialog-warning {
-    .iconBox{
+    .iconBox {
         color: $warn-color;
     }
 }

@@ -12,7 +12,14 @@ export const openDialog = (content: string, props?: any) => {
         h(
           Dialog,
           {
-            'v-model:visible': visible.value,
+            ':visible': visible.value,
+            'onUpdate:visible': (val) => {
+              visible.value = val;
+              if (!val) {
+                app.unmount();
+                document.body.removeChild(container);
+              }
+            },
             ...props
           },
           () => content
