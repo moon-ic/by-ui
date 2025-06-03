@@ -53,7 +53,7 @@ const props = withDefaults(defineProps<InputProps>(), {
 }
 
 .input-inner {
-    @include button-size(5px, 10px, 14px, 3px);
+    /* @include input-size(5px, 10px, 14px, 3px); */
     width: 100%;
     font-weight: 400;
     line-height: 1.5rem;
@@ -84,17 +84,20 @@ const props = withDefaults(defineProps<InputProps>(), {
     }
 }
 
-.input-size-small .input-inner {
+.by-input-small > .input-inner,
+.by-input-small > .input-group-prepend,
+.by-input-small > .input-group-append {
     @include input-size(5px, 10px, 14px, 3px);
 }
 
-.input-size-large .input-inner {
-    @include input-size(5px, 10px, 14px, 3px);
+.by-input-large > .input-inner,
+.by-input-large > .input-group-prepend,
+.by-input-large > .input-group-append {
+    @include input-size(8px, 14px, 16px, 5px);
 }
 
 .input-group-prepend,
 .input-group-append {
-    @include input-size(5px, 10px, 14px, 3px);
     align-items: center;
     margin-bottom: 0;
     font-size: 14px;
