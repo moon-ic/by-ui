@@ -19,17 +19,4 @@ import { Button } from "@by-ui/components";
 import { Dialog } from "@by-ui/components";
 
 const visible1 = ref(false);
-
-const onConfirm = (context) => {
-    const { e } = context;
-    sendingRequest();
-    visible1.value = false;
-    e.stopPropagation();
-};
-const sendingRequest = () => {
-    console.log("sending request");
-};
-const close1 = () => {
-    visible1.value = false;
-};
 </script>

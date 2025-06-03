@@ -16,7 +16,7 @@
             <slot>{{ body }}</slot>
         </div>
         <div class="by-dialog-footer">
-                <Button v-if="cancelBtn === false" type="default" style="width: 60px" @click="closeDialog()">取消</Button>
+                <Button v-if="cancelBtn === false" type="default" style="width: 60px" @click="close()">取消</Button>
                 <Button type="primary" style="width: 60px;" @click="confirm()">确认</Button>
         </div>
     </div>
@@ -31,6 +31,7 @@ import IconWarning from '@/components/base/assets/svg/warning.vue';
 import IconSuccess from '@/components/base/assets/svg/success.vue';
 import IconError from '@/components/base/assets/svg/error.vue';
 import Button from '@/components/button/index.vue';
+import { computed } from "vue";
 
 const props = withDefaults(defineProps<DialogProps>(), {
     type: "default",
@@ -39,13 +40,15 @@ const props = withDefaults(defineProps<DialogProps>(), {
 const emit = defineEmits(['update:visible','confirm', 'close']);
 const closeDialog = () => {
     emit('update:visible', false);
-    console.log('close');
-    emit('close');
 };
 const confirm = () => {
     emit('confirm');
     closeDialog();
 };
+const close = () => {
+    emit('close');
+    closeDialog();
+}
 </script>
 
 <style scoped lang="scss">
