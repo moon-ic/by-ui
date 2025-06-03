@@ -25,11 +25,13 @@
 
 <script setup lang="ts">
 import { DialogProps } from "./src/prop";
+
 import IconInfo from '@/components/base/assets/svg/info.vue';
 import IconClose from '@/components/base/assets/svg/close.vue';
 import IconWarning from '@/components/base/assets/svg/warning.vue';
 import IconSuccess from '@/components/base/assets/svg/success.vue';
 import IconError from '@/components/base/assets/svg/error.vue';
+
 import Button from '@/components/button/index.vue';
 import { computed } from "vue";
 
@@ -38,6 +40,7 @@ const props = withDefaults(defineProps<DialogProps>(), {
     visible: true
 });
 const emit = defineEmits(['update:visible','confirm', 'close']);
+
 const closeDialog = () => {
     emit('update:visible', false);
 };

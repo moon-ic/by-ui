@@ -1,27 +1,25 @@
 import { createApp, h, ref } from 'vue'
 import Dialog from './index.vue'
 
-export const openDialog = (content: string, props: any) => {
-  const container = document.createElement('div')
-  document.body.appendChild(container)
+export const openDialog = (content: string, props?: any) => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  const visible = ref(props?.visible || false)
 
   const app = createApp({
     setup() {
-      const visible = ref(true);
-      return () => h(
-        Dialog,
-        {
-            modelValue: visible.value,
-            'onUpdate:modelValue': (val: boolean) => {
-                if (!val) {
-                    app.unmount();
-                    container.remove();
-                }
-            }
-        },
-        () => content);
-    }
+      return () =>
+        h(
+          Dialog,
+          {
+            'v-model:visible': visible.value,
+            ...props
+          },
+          () => content
+        );
+    },
   }, props);
 
-  app.mount(container)
-}
+  app.mount(container);
+  return visible;
+};
