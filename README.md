@@ -21,7 +21,7 @@
 ## 目前技术栈
 
 - 包管理器：pnpm workspace
-- 框架：vue
+- 框架：vue3
 - css 预处理语言：sass
 - 测试：vitest
 - 打包：vite
@@ -57,7 +57,7 @@
 
 - Form 表单 ❌
 
-- Textarea 富文本编辑器 ❌
+- Editor 富文本编辑器 ❌
 
 ### 布局组件
 
