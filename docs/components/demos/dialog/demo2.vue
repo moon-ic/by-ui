@@ -12,7 +12,6 @@ const visible = () =>
         header: "提示",
         type: "info",
         body: "提示内容",
-        visible: true,
         onConfirm: () => {
             console.log("确认按钮被点击");
         },

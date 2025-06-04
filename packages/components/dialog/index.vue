@@ -33,7 +33,6 @@ import IconSuccess from "@/components/base/assets/svg/success.vue";
 import IconError from "@/components/base/assets/svg/error.vue";
 
 import Button from "@/components/button/index.vue";
-import { computed } from "vue";
 
 const props = withDefaults(defineProps<DialogProps>(), {
     type: "default",
