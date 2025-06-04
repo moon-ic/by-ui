@@ -1,7 +1,13 @@
 <template>
     <div class="by-upload">
-        <div class="upload-input" @click="handleClick">
-            <slot></slot>
+        <div class="upload-input">
+            <Dragger v-if="drag" :onFile="uploadFile">
+                <slot></slot>
+            </Dragger>
+            <div v-else @click="handleClick">
+                qqq
+                <slot></slot>
+            </div>
             <input
                 class="file-input"
                 :style="{ display: 'none' }"
@@ -12,6 +18,7 @@
                 :multiple="multiple"
             />
         </div>
+
         <div class="upload-list" :onRemove="handleRemove">
             <li v-for="item in fileList" :class="['upload-list-item', `upload-list-${item.status}`]" :key="item.uid">
                 <span :class="['file-name', `file-name-${item.status}`]">
@@ -35,11 +42,15 @@
 import { ref } from "vue";
 import type { UploadFile } from "./src/props";
 import { UploadProps } from "./src/props";
+
 import IconClose from "@/components/base/assets/svg/close.vue";
 import IconInfo from "@/components/base/assets/svg/info.vue";
 import IconSuccess from "@/components/base/assets/svg/success.vue";
 import IconError from "@/components/base/assets/svg/error.vue";
 import IconLoading from "@/components/base/assets/svg/loading.vue";
+import Dragger from "./src/dragger.vue";
+import progress from "./src/progress.vue";
+
 import axios from "axios";
 
 const props = withDefaults(defineProps<UploadProps>(), {
@@ -270,5 +281,8 @@ defineExpose({
     .file-status {
         color: $danger-color;
     }
+}
+.is-dragover {
+    opacity: 0.7;
 }
 </style>
