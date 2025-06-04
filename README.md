@@ -49,9 +49,9 @@
 
 ### 表单组件
 
-- Input 输入框 ❌
+- Input 输入框 ✅
 
-- Upload 拖拽上传 ❌
+- Upload 拖拽上传 ⭐️
 
 - Progress 进度条 ❌
 
@@ -67,6 +67,6 @@
 
 - Transition 动画过渡 ❌
 
-- Dialog 弹框 ✅
+- Dialog 弹框 ⭐️
 
 - Message 全局提示 ❌
