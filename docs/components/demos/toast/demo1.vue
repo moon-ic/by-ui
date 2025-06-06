@@ -1,8 +1,7 @@
 <template>
-    <Toast></Toast>
+    <Toast message="nihao"></Toast>
 </template>
 <script setup lang="ts">
-import { Toast } from '@by-ui/components';
+import { Toast } from "@by-ui/components";
 </script>
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
