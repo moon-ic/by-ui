@@ -11,12 +11,10 @@
 
 功能：
 
-1. 有表单组件，布局组件，全局组件3类：
-   1.1 支持单独引用, 全局注册, dialog 组件 api 引用。
+1. 支持单独引用, 全局注册, dialog 组件 api 引用。
 2. 提供基础 css 库, 设置基础 css 变量, 添加 css 动画库。
 3. 提供 svg 库。
 4. 有演示 demo。
-5. 有btn, dialog 组件。支持单独引用与全局注册。
 
 ## 目前技术栈
 
@@ -43,21 +41,23 @@
 
 - Button 按钮 ✅
 
-- Icon 图标 ❌
-
-- Menu 导航菜单（顶部|侧面） ❌
+- Tabs 选项卡 ❌
 
 ### 表单组件
 
 - Input 输入框 ✅
 
-- Upload 拖拽上传 ⭐️
+- Upload 拖拽上传 ✅
 
-- Progress 进度条 ❌
+- Progress 进度条 ⭐️
 
 - Form 表单 ❌
 
-- Editor 富文本编辑器 ❌
+### 数据展示
+
+- Avatar 头像 ❌
+
+- list 列表 ❌
 
 ### 布局组件
 
@@ -69,4 +69,6 @@
 
 - Dialog 弹框 ⭐️
 
-- Message 全局提示 ❌
+- Toast 轻提示 ❌
+
+- Tooltip 文字提示 ❌
