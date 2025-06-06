@@ -3,7 +3,7 @@
         <!-- <ButtonDemo1 /> -->
         <!-- <DialogDemo2 /> -->
         <!-- <InputDemo1 /> -->
-        <UploadDemo1 />
+        <TabsDemo1 />
     </div>
 </template>
 

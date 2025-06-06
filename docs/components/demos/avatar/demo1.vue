@@ -1,8 +1,6 @@
 <template>
     <div>
         <Avatar />
-        <Avatar />
-        <Avatar />
     </div>
 </template>
 <script setup>
