@@ -14,8 +14,12 @@ import DialogDemo2 from "./dialog/demo2.vue";
 import InputDemo1 from "./input/demo1.vue";
 import UploadDemo1 from "./upload/demo1.vue";
 import UploadDemo2 from "./upload/demo2.vue";
-</script>
+import AvatarDemo1 from "./avatar/demo1.vue"
+import Listdemo1 from "./list/demo1.vue";
+import Tabsdemo1 from "./tabs/demo1.vue";
+import Tooltipsdemo1 from "./tooltips/demo1.vue";
 
+</script>
 <style scoped>
 #app {
     overflow: hidden;
