@@ -1,8 +1,11 @@
 <template>
     <div>
-        <Avatar />
+        <Avatar image="https://picsum.photos/200/300" />
+        <Avatar alt="John Doe" />
+        <Avatar>qq<Icon></Icon></Avatar>
     </div>
 </template>
 <script setup>
 import { Avatar } from "@by-ui/components";
+import Icon from "../../../../packages/components/base/assets/svg/info.vue";
 </script>

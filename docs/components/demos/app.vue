@@ -6,8 +6,8 @@
         <!-- <TabsDemo1 /> -->
         <!-- <UploadDemo1 /> -->
         <!-- <UploadDemo2 /> -->
-        <!-- <AvatarDemo1 /> -->
-        <ListDemo1 />
+        <AvatarDemo1 />
+        <!-- <ListDemo1 /> -->
         <!-- <TabsDemo1 /> -->
         <!-- <TooltipsDemo1 /> -->
     </div>
