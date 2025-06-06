@@ -18,13 +18,13 @@
                 :multiple="multiple"
             />
         </div>
-
         <div class="upload-list" :onRemove="handleRemove">
             <li v-for="item in fileList" :class="['upload-list-item', `upload-list-${item.status}`]" :key="item.uid">
                 <span :class="['file-name', `file-name-${item.status}`]">
                     <IconInfo size="18" />
                     {{ item.name }}
                 </span>
+                <Progress v-if="item.status === 'uploading'" :percent="item.percent" />
                 <span className="file-status">
                     <IconError size="24" v-if="item.status === 'error'" />
                     <IconLoading size="24" v-if="item.status === 'uploading'" />
