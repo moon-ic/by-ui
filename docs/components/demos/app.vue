@@ -15,9 +15,9 @@ import InputDemo1 from "./input/demo1.vue";
 import UploadDemo1 from "./upload/demo1.vue";
 import UploadDemo2 from "./upload/demo2.vue";
 import AvatarDemo1 from "./avatar/demo1.vue"
-import Listdemo1 from "./list/demo1.vue";
-import Tabsdemo1 from "./tabs/demo1.vue";
-import Tooltipsdemo1 from "./tooltips/demo1.vue";
+import ListDemo1 from "./list/demo1.vue";
+import TabsDemo1 from "./tabs/demo1.vue";
+import TooltipsDemo1 from "./tooltips/demo1.vue";
 
 </script>
 <style scoped>
