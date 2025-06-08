@@ -61,3 +61,5 @@ import { Button } from "by-ui";
 ```
 
 2. 在模板中使用即可。
+
+<preview path="../components/demos/button/demo1.vue" language="vue" />

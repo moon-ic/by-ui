@@ -30,7 +30,12 @@
 ## 食用指南
 
 ```
-暂无，稍待
+## 安装组件库
+git clone
+pnpm i
+
+## 启动组件库文档
+pnpm docs:dev
 ```
 
 ## 待做 List
