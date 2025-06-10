@@ -1,8 +1,11 @@
-export default {
+import { defineConfig } from "vitepress";
+import { vitepressDemoPlugin } from "vitepress-demo-plugin";
+import { componentPreview, containerPreview } from "@vitepress-demo-preview/plugin";
+
+export default defineConfig({
     // 站点级选项
     title: "ByUI",
     description: "一个基于vue3的组件库",
-
     themeConfig: {
         // 主题级选项
         sidebar: [
@@ -31,5 +34,11 @@ export default {
                 ]
             }
         ]
+    },
+    markdown: {
+        config(md) {
+            md.use(componentPreview);
+            md.use(containerPreview);
+        }
     }
-};
+});

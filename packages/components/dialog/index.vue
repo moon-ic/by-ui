@@ -26,13 +26,13 @@
 <script setup lang="ts">
 import { DialogProps } from "./src/prop";
 
-import IconInfo from "@/components/base/assets/svg/info.vue";
-import IconClose from "@/components/base/assets/svg/close.vue";
-import IconWarning from "@/components/base/assets/svg/warning.vue";
-import IconSuccess from "@/components/base/assets/svg/success.vue";
-import IconError from "@/components/base/assets/svg/error.vue";
+import IconInfo from "../base/assets/svg/info.vue";
+import IconClose from "../base/assets/svg/close.vue";
+import IconWarning from "../base/assets/svg/warning.vue";
+import IconSuccess from "../base/assets/svg/success.vue";
+import IconError from "../base/assets/svg/error.vue";
 
-import Button from "@/components/button/index.vue";
+import Button from "../button/index.vue";
 
 const props = withDefaults(defineProps<DialogProps>(), {
     type: "default",

@@ -43,11 +43,11 @@ import { ref } from "vue";
 import type { UploadFile } from "./src/props";
 import { UploadProps } from "./src/props";
 
-import IconClose from "@/components/base/assets/svg/close.vue";
-import IconInfo from "@/components/base/assets/svg/info.vue";
-import IconSuccess from "@/components/base/assets/svg/success.vue";
-import IconError from "@/components/base/assets/svg/error.vue";
-import IconLoading from "@/components/base/assets/svg/loading.vue";
+import IconClose from "../base/assets/svg/close.vue";
+import IconInfo from "../base/assets/svg/info.vue";
+import IconSuccess from "../base/assets/svg/success.vue";
+import IconError from "../base/assets/svg/error.vue";
+import IconLoading from "../base/assets/svg/loading.vue";
 import Dragger from "./src/dragger.vue";
 import progress from "./src/progress.vue";
 

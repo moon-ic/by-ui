@@ -1,5 +1,8 @@
 # Button 组件
 
+<preview path="./demos/button/demo1.vue"></preview>
+<demo html="../components/demos/index.html" stackblitz="true" codesandbox="true"></demo>
+
 ## 简介
 
 Button 是一个基础的按钮组件，支持多种样式和交互功能。
@@ -62,4 +65,4 @@ import { Button } from "by-ui";
 
 2. 在模板中使用即可。
 
-<preview path="../components/demos/button/demo1.vue" language="vue" />
+<preview path="../components/demos/button/demo1.vue"></preview>
