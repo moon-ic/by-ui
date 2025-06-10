@@ -13,7 +13,7 @@ export default defineConfig({
                 items: [
                     { text: "Avatar - 头像", link: "/components/avatar.md" },
                     { text: "Button - 按钮", link: "/components/button.md" },
-                    { text: "List - 列表", link: "/components/list.md" }
+                    { text: "List - 列表（完成中）", link: "/components/list.md" }
                 ]
             },
             {
@@ -27,9 +27,9 @@ export default defineConfig({
                 text: "全局组件",
                 items: [
                     { text: "Dialog - 弹窗", link: "/components/dialog.md" },
-                    { text: "Tabs - 选项卡", link: "/components/tabs.md" },
-                    { text: "Toast - 轻提示", link: "/components/toast.md" },
-                    { text: "Tooltips - 文字提示", link: "/components/tooltips.md" }
+                    { text: "Tabs - 选项卡（完成中）", link: "/components/tabs.md" },
+                    { text: "Toast - 轻提示（完成中）", link: "/components/toast.md" },
+                    { text: "Tooltips - 文字提示（完成中）", link: "/components/tooltips.md" }
                 ]
             }
         ]
