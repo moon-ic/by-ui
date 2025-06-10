@@ -1,11 +1,10 @@
 <template>
     <div class="by-upload">
-        <div class="upload-input">
+        <div class="upload-input" @click="handleClick">
             <Dragger v-if="drag" :onFile="uploadFile">
                 <slot></slot>
             </Dragger>
-            <div v-else @click="handleClick">
-                qqq
+            <div v-else >
                 <slot></slot>
             </div>
             <input

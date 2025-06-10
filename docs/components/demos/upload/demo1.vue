@@ -1,7 +1,7 @@
 <template>
     <div>
         <Upload action="https://jsonplaceholder.typicode.com/posts">
-            <Button>你好</Button>
+            <Button>点我上传试试</Button>
         </Upload>
     </div>
 </template>
