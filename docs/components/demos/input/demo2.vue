@@ -1,8 +1,7 @@
 <template>
     <div class="button-demo">
-        <Input prepend="前缀" />
-        <Input append="后缀" />
-        <Input defaultValue="普普通通一input" />
+        <Input size="small" defaultValue="普普通通一input" />
+        <Input size="large" defaultValue="普普通通一input" />
     </div>
 </template>
 <script setup>

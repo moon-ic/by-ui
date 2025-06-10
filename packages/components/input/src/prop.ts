@@ -1,4 +1,4 @@
-export type InputStatus = "default" | "disable" | "readOnly" | "warning" | "success" | "error";
+export type InputStatus = "default" | "disabled" | "readonly";
 export type InputAlign = "left" | "center" | "right";
 
 export interface InputProps {
@@ -32,10 +32,6 @@ export interface InputProps {
      * 默认值
      */
     defaultValue?: string;
-    /**
-     * 默认值
-     */
-    tips?: string;
     /**
      * 最大长度
      */

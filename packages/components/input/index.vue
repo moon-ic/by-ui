@@ -10,20 +10,29 @@
         :style="{ maxWidth: maxWidth ? maxWidth : 'none' }"
     >
         <div v-if="prepend" className="input-group-prepend">{{ prepend }}</div>
-        <input class="input-inner" :style="{ textAlign: align ? align : 'center' }" :status :maxWidth :defaultValue />
+        <input
+            class="input-inner"
+            :style="{ textAlign: align ? align : 'center' }"
+            :status
+            :maxWidth
+            :defaultValue
+            :disabled="status === 'disabled'"
+            :readonly="status === 'readonly'"
+        />
         <div v-if="append" className="input-group-append">{{ append }}</div>
     </div>
 </template>
 
 <script lang="ts" setup>
+import { readonly } from "vue";
 import { InputProps } from "./src/prop";
 const props = withDefaults(defineProps<InputProps>(), {
     status: "default",
     size: "small",
     maxWidth: "200px",
-    defaultValue: "3",
-    prepend: "1",
-    append: "2"
+    defaultValue: "",
+    prepend: "",
+    append: ""
 });
 </script>
 
@@ -33,7 +42,6 @@ const props = withDefaults(defineProps<InputProps>(), {
     position: relative;
     display: flex;
     width: 100%;
-    margin-bottom: 30px;
 
     .icon-wrapper {
         position: absolute;
@@ -53,11 +61,10 @@ const props = withDefaults(defineProps<InputProps>(), {
 }
 
 .input-inner {
-    /* @include input-size(5px, 10px, 14px, 3px); */
     width: 100%;
     font-weight: 400;
     line-height: 1.5rem;
-    color: $dark-color;
+    color: $secondary-color;
     background-color: $white-color;
     background-clip: padding-box;
     border: 1px solid $third-color;
@@ -65,7 +72,7 @@ const props = withDefaults(defineProps<InputProps>(), {
     transition: $input-transition;
 
     &:focus {
-        color: darken($dark-color, 25%);
+        color: $dark-color;
         border-color: darken($primary-color, 10%);
         outline: 0;
         box-shadow: 0 0 0 1px rgba($primary-color, 0.25);
