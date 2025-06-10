@@ -1,9 +1,24 @@
 <template>
-    <li class="by-list-item" :class="{ 'is-disabled': disabled }">
+    <li
+        class="by-list-item"
+        :class="{ 'is-disabled': disabled }"
+        :style="{ 'border-bottom': split ? '1px solid #d0d8e2' : 'none' }"
+    >
         <ul class="list-items">
-            <li class="title">{{ title }}</li>
-            <li class="content">{{ content }}</li>
-            <div class="action"></div>
+            <li class="left">
+                <span class="title">{{ title }}</span>
+                <span class="content">{{ content }}</span>
+            </li>
+            <li class="actions">
+                <span
+                    v-for="action in actions"
+                    :key="action.text"
+                    class="action"
+                    @click="(e: MouseEvent) => action.onClick?.(e)"
+                >
+                    {{ action.text }}
+                </span>
+            </li>
         </ul>
     </li>
 </template>
@@ -20,8 +35,42 @@ const props = withDefaults(defineProps<ListItemProps>(), {
 .is-disabled {
     color: $primary-color;
 }
-.list-items {
+.by-list-item {
+    box-sizing: border-box;
+    min-width: 200px;
+    font-size: 14px;
+    line-height: 1.8rem;
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    .list-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .left {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .title {
+                font-size: 16px;
+            }
+            .content {
+                color: $secondary-color;
+            }
+        }
+        .actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .action {
+                width: 50px;
+                text-align: center;
+                color: $primary-color;
+                padding: 0 10px;
+            }
+        }
+    }
 }
 </style>

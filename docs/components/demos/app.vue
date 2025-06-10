@@ -7,9 +7,9 @@
         <!-- <UploadDemo1 /> -->
         <!-- <UploadDemo2 /> -->
         <!-- <AvatarDemo1 /> -->
-        <!-- <ListDemo1 /> -->
+        <ListDemo1 />
         <!-- <ToastDemo1 /> -->
-        <TooltipsDemo1 />
+        <!-- <TooltipsDemo1 /> -->
     </div>
 </template>
 

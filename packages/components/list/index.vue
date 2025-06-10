@@ -1,14 +1,23 @@
 <template>
-    <ul class="by-list">
-        <div class="header">{{ header }}</div>
+    <ul
+        class="by-list"
+        :style="{ height: height, overflow: height ? 'auto' : undefined }"
+        :class="{ 'is-zebra': zebra }"
+    >
+        <span class="header">
+            <slot name="header">{{ header }}</slot>
+        </span>
         <listItem
-            v-for="(item, index) in lists"
+            v-for="item in lists"
             :title="item.title"
             :content="item.content"
-            :action="item.action"
+            :actions="item.actions"
             :disabled="item.disabled"
+            :split
         />
-        <div class="footer">{{ footer }}</div>
+        <span class="footer">
+            <slot name="footer">{{ footer }}</slot>
+        </span>
     </ul>
 </template>
 
@@ -16,9 +25,31 @@
 import listItem from "./src/listItem.vue";
 import { ListProps } from "./src/props";
 
-const props = withDefaults(defineProps<ListProps>(), {});
+const props = withDefaults(defineProps<ListProps>(), {
+    height: "auto"
+});
 </script>
 
 <style scoped lang="scss">
 @import "../base/styles/index.scss";
+.by-list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    .header {
+        margin-bottom: 10px;
+    }
+    .footer {
+        margin-top: 10px;
+    }
+}
+.is-zebra {
+    .by-list-item:nth-child(odd) {
+        background-color: $light-color; // 设置奇数项的背景颜色
+    }
+
+    .by-list-item:nth-child(even) {
+        background-color: $white-color; // 设置偶数项的背景颜色
+    }
+}
 </style>
