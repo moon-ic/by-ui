@@ -1,6 +1,4 @@
-# Button 组件
-
-<demo vue="./demos/button/demo1.vue" stackblitz="true" codesandbox="true"></demo>
+# Button 按钮
 
 ## 简介
 
@@ -36,32 +34,25 @@ Button 是一个基础的按钮组件，支持多种样式和交互功能。
 | default | 按钮内容 |
 | icon    | 按钮图标 |
 
-## 示例代码
+## 示例
 
-```vue
-<template>
-  <Button type="primary" @click="handleClick">点击我</Button>
-</template>
+不同颜色主题的按钮
+<demo
+        description="提供default，primary，waring，danger 4种样式的按钮"
+        vue="./demos/button/demo1.vue"
+        stackblitz="true"
+        codesandbox="true"/>
 
-<script>
-export default {
-  methods: {
-    handleClick() {
-      console.log("按钮被点击");
-    },
-  },
-};
-</script>
-```
+禁用按钮
+<demo
+        description="参数含有disabled时，按钮禁用"
+        vue="./demos/button/demo2.vue"
+        stackblitz="true"
+        codesandbox="true"/>
 
-## 使用说明
-
-1. 引入组件：
-
-```javascript
-import { Button } from "by-ui";
-```
-
-2. 在模板中使用即可。
-
-<preview path="../components/demos/button/demo1.vue"></preview>
+不同尺寸按钮
+<demo
+        description="含有 large｜medium｜small 三种尺寸"
+        vue="./demos/button/demo3.vue"
+        stackblitz="true"
+        codesandbox="true"/>

@@ -8,7 +8,7 @@
 import { ButtonProps } from "./src/props";
 const props = withDefaults(defineProps<ButtonProps>(), {
     type: "primary",
-    size: "small",
+    size: "medium",
     disabled: false
 });
 
@@ -26,7 +26,7 @@ const handleClick = () => {
 
 .by-btn {
     position: relative;
-    display: inline-block;
+    display: block;
     color: $dark-color;
     font-weight: 400;
     line-height: 1.5rem;
@@ -77,7 +77,10 @@ const handleClick = () => {
 }
 
 .by-btn-small {
-    @include button-size(5px, 10px, 14px, 3px);
+    @include button-size(4px, 7px, 13px, 3px);
+}
+.by-btn-medium {
+    @include button-size(5px, 10px, 14px, 4px);
 }
 .by-btn-large {
     @include button-size(8px, 14px, 16px, 5px);

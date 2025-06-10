@@ -1,9 +1,8 @@
 <template>
     <div class="button-demo">
-        <Button type="default" @click="handleClick">Click Me</Button>
+        <Button @click="handleClick" size="small">Primary</Button>
         <Button @click="handleClick">Primary</Button>
-        <Button type="warn" @click="handleClick">Delete</Button>
-        <Button type="danger" @click="handleClick">Delete</Button>
+        <Button @click="handleClick" size="large">Primary</Button>
     </div>
 </template>
 
@@ -17,9 +16,9 @@ const onConfirm = () => {
     console.log("nihao");
 };
 </script>
+
 <style scoped>
-.button-demo {
-    display: flex;
-    gap: 10px;
+.button-demo Button {
+    margin: 10px;
 }
 </style>

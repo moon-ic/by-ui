@@ -1,6 +1,6 @@
 export type ButtonType = "primary" | "danger" | "default";
 
-export type ButtonSize = "small" | "meddle" | "large";
+export type ButtonSize = "small" | "medium" | "large";
 
 export interface ButtonProps {
     /**

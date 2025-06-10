@@ -1,9 +1,9 @@
 <template>
     <div class="button-demo">
-        <Button type="default" @click="handleClick">Click Me</Button>
-        <Button @click="handleClick">Primary</Button>
-        <Button type="warn" @click="handleClick">Delete</Button>
-        <Button type="danger" @click="handleClick">Delete</Button>
+        <Button type="default" @click="handleClick" disabled>Click Me</Button>
+        <Button @click="handleClick" disabled>Primary</Button>
+        <Button type="warn" @click="handleClick" disabled>Delete</Button>
+        <Button type="danger" @click="handleClick" disabled>Delete</Button>
     </div>
 </template>
 
