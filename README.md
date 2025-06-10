@@ -38,7 +38,7 @@ pnpm i
 pnpm docs:dev
 ```
 
-## 待做 List
+## 组件 List
 
 ✅ 已完成 ⭐️ 完善中 ❌ 未开始
 
@@ -46,23 +46,23 @@ pnpm docs:dev
 
 - Button 按钮 ✅
 
-- Tabs 选项卡 ❌
+- Tabs 选项卡 ⭐️
 
 ### 表单组件
 
 - Input 输入框 ✅
 
-- Upload 拖拽上传 ✅
+- Upload 拖拽上传 ⭐️
 
 - Progress 进度条 ⭐️
 
-- Form 表单 ❌
+- Form 表单 ⭐️
 
 ### 数据展示
 
-- Avatar 头像 ❌
+- Avatar 头像 ⭐️
 
-- list 列表 ❌
+- list 列表 ⭐️
 
 ### 布局组件
 
@@ -74,6 +74,6 @@ pnpm docs:dev
 
 - Dialog 弹框 ⭐️
 
-- Toast 轻提示 ❌
+- Toast 轻提示 ⭐️
 
-- Tooltip 文字提示 ❌
+- Tooltip 文字提示 ⭐️
