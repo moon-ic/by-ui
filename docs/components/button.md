@@ -1,7 +1,6 @@
 # Button 组件
 
-<preview path="./demos/button/demo1.vue"></preview>
-<demo html="../components/demos/index.html" stackblitz="true" codesandbox="true"></demo>
+<demo vue="./demos/button/demo1.vue" stackblitz="true" codesandbox="true"></demo>
 
 ## 简介
 

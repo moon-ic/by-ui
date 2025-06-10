@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
 import { vitepressDemoPlugin } from "vitepress-demo-plugin";
-import { componentPreview, containerPreview } from "@vitepress-demo-preview/plugin";
 
 export default defineConfig({
     // 站点级选项
@@ -37,8 +36,7 @@ export default defineConfig({
     },
     markdown: {
         config(md) {
-            md.use(componentPreview);
-            md.use(containerPreview);
+            md.use(vitepressDemoPlugin);
         }
     }
 });
