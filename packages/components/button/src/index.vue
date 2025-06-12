@@ -42,8 +42,6 @@ const handleClick = () => {
     display: flex;
     justify-content: center;
 
-    @include button-size(0.375rem, 0.75rem, 1rem, 0.25rem);
-
     &.disabled,
     &[disabled] {
         box-shadow: none;
@@ -57,7 +55,32 @@ const handleClick = () => {
     transition: $btn-transition;
 }
 .by-btn-default {
-    @include button-style($white-color, $primary-color, $primary-color);
+    color: $primary-color;
+    background: $white-color;
+    border-color: $primary-color;
+    &:hover {
+        color: $primary-color;
+        background: darken($white-color, 7.5%);
+        border-color: darken($primary-color, 10%);
+        box-shadow:
+            inset 0 1px 0 rgba($primary-color, 0.15),
+            0 8px 8px rgba($primary-color, 0.075);
+    }
+    &:active,
+    &.active {
+        color: $primary-color;
+        background: darken($white-color, 5%);
+        border-color: darken($primary-color, 8%);
+        box-shadow:
+            inset 0 2px 0 rgba($primary-color, 0.15),
+            0 5px 5px rgba($primary-color, 0.075);
+    }
+    &:disabled,
+    &.disabled {
+        color: $primary-color;
+        background: $white-color;
+        border-color: $primary-color;
+    }
     &:hover {
         background-color: $white-color;
     }
@@ -67,22 +90,103 @@ const handleClick = () => {
     }
 }
 .by-btn-primary {
-    @include button-style($primary-color, $primary-color, $light-color);
+    color: $light-color;
+    background: $primary-color;
+    border-color: $primary-color;
+    &:hover {
+        color: $light-color;
+        background: darken($primary-color, 7.5%);
+        border-color: darken($primary-color, 10%);
+        box-shadow:
+            inset 0 1px 0 rgba($light-color, 0.15),
+            0 8px 8px rgba($light-color, 0.075);
+    }
+    &:active,
+    &.active {
+        color: $light-color;
+        background: darken($primary-color, 5%);
+        border-color: darken($primary-color, 8%);
+        box-shadow:
+            inset 0 2px 0 rgba($light-color, 0.15),
+            0 5px 5px rgba($light-color, 0.075);
+    }
+    &:disabled,
+    &.disabled {
+        color: $light-color;
+        background: $primary-color;
+        border-color: $primary-color;
+    }
 }
 .by-btn-danger {
-    @include button-style($danger-color, $danger-color, $light-color);
+    color: $light-color;
+    background: $danger-color;
+    border-color: $danger-color;
+    &:hover {
+        color: $light-color;
+        background: darken($danger-color, 7.5%);
+        border-color: darken($danger-color, 10%);
+        box-shadow:
+            inset 0 1px 0 rgba($light-color, 0.15),
+            0 8px 8px rgba($light-color, 0.075);
+    }
+    &:active,
+    &.active {
+        color: $light-color;
+        background: darken($danger-color, 5%);
+        border-color: darken($danger-color, 8%);
+        box-shadow:
+            inset 0 2px 0 rgba($light-color, 0.15),
+            0 5px 5px rgba($light-color, 0.075);
+    }
+    &:disabled,
+    &.disabled {
+        color: $light-color;
+        background: $danger-color;
+        border-color: $danger-color;
+    }
 }
 .by-btn-warn {
-    @include button-style($warn-color, $warn-color, $light-color);
+    color: $light-color;
+    background: $warn-color;
+    border-color: $warn-color;
+    &:hover {
+        color: $light-color;
+        background: darken($warn-color, 7.5%);
+        border-color: darken($warn-color, 10%);
+        box-shadow:
+            inset 0 1px 0 rgba($light-color, 0.15),
+            0 8px 8px rgba($light-color, 0.075);
+    }
+    &:active,
+    &.active {
+        color: $light-color;
+        background: darken($warn-color, 5%);
+        border-color: darken($warn-color, 8%);
+        box-shadow:
+            inset 0 2px 0 rgba($light-color, 0.15),
+            0 5px 5px rgba($light-color, 0.075);
+    }
+    &:disabled,
+    &.disabled {
+        color: $light-color;
+        background: $warn-color;
+        border-color: $warn-color;
+    }
 }
 
 .by-btn-small {
-    @include button-size(4px, 7px, 13px, 3px);
+    padding: 4px 7px;
+    font-size: 13px;
+    border-radius: 3px;
 }
 .by-btn-medium {
-    @include button-size(5px, 10px, 14px, 4px);
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
 }
 .by-btn-large {
-    @include button-size(8px, 14px, 16px, 5px);
+    padding: 8px 14px;
+    font-size: 16px;
+    border-radius: 5px;
 }
 </style>

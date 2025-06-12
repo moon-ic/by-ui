@@ -94,13 +94,17 @@ const props = withDefaults(defineProps<InputProps>(), {
 .by-input-small > .input-inner,
 .by-input-small > .input-group-prepend,
 .by-input-small > .input-group-append {
-    @include input-size(5px, 10px, 14px, 3px);
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 3px;
 }
 
 .by-input-large > .input-inner,
 .by-input-large > .input-group-prepend,
 .by-input-large > .input-group-append {
-    @include input-size(8px, 14px, 16px, 5px);
+    padding: 8px 14px;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 .input-group-prepend,
@@ -118,14 +122,15 @@ const props = withDefaults(defineProps<InputProps>(), {
 }
 .input-group > .input-group-prepend,
 .input-group.input-group-append > .input-inner {
-    @include border-right-radius(0);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .input-group > .input-group-append,
 .input-group.input-group-prepend > .input-inner {
-    @include border-left-radius(0);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
-
 .input-group {
     background: none;
     border: none;
