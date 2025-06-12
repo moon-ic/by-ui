@@ -30,8 +30,12 @@ const props = withDefaults(defineProps<ListProps>(), {
 });
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 .by-list {
     display: flex;
     flex-direction: column;
@@ -45,11 +49,11 @@ const props = withDefaults(defineProps<ListProps>(), {
 }
 .is-zebra {
     .by-list-item:nth-child(odd) {
-        background-color: $light-color; // 设置奇数项的背景颜色
+        background-color: var(--light-color);
     }
 
     .by-list-item:nth-child(even) {
-        background-color: $white-color; // 设置偶数项的背景颜色
+        background-color: var(--white-color);
     }
 }
 </style>

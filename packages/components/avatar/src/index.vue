@@ -13,6 +13,10 @@ import { AvatarProps } from "./props";
 const props = defineProps<AvatarProps>();
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 </style>

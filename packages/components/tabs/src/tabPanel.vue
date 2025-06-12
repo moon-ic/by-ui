@@ -11,9 +11,13 @@ const props = withDefaults(defineProps<TabPanelProps>(), {
 });
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 .is-active {
-    color: $primary-color;
+    color: var(--primary-color);
 }
 </style>

@@ -54,8 +54,12 @@ const close = () => {
 };
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 
 .by-dialog {
     position: fixed;
@@ -69,11 +73,11 @@ const close = () => {
     align-items: center;
     width: 415px;
     padding: 32px;
-    background-color: $white-color;
+    background-color: var(--white-color);
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: $btn-transition;
+    transition: var(--btn-transition);
 
     &-header {
         width: 100%;
@@ -81,7 +85,7 @@ const close = () => {
         font-size: 16px;
         font-weight: bold;
         line-height: 30px;
-        color: $dark-color;
+        color: var(--dark-color);
         display: flex;
         align-items: center;
         justify-content: start;
@@ -100,11 +104,11 @@ const close = () => {
             justify-content: center;
             align-items: center;
             &:hover {
-                background-color: darken($light-color, 5%);
+                background-color: darken(var(--light-color), 5%);
             }
             &:active,
             &.active {
-                background-color: darken($light-color, 10%);
+                background-color: darken(var(--light-color), 10%);
             }
         }
     }
@@ -133,22 +137,22 @@ const close = () => {
 
 .by-dialog-info {
     .iconBox {
-        color: $primary-color;
+        color: $var(--primary-color);
     }
 }
 .by-dialog-success {
     .iconBox {
-        color: $success-color;
+        color: var(--success-color);
     }
 }
 .by-dialog-danger {
     .iconBox {
-        color: $danger-color;
+        color: var(--danger-color);
     }
 }
 .by-dialog-warning {
     .iconBox {
-        color: $warn-color;
+        color: var(--warn-color);
     }
 }
 

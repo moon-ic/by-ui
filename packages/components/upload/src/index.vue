@@ -167,8 +167,12 @@ defineExpose({
 });
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 .by-upload {
     width: 100%;
     min-width: 350px;
@@ -185,17 +189,17 @@ defineExpose({
     padding: 20px;
     text-align: center;
     cursor: pointer;
-    background: $light-color;
-    border: 1px dashed $third-color;
+    background: var(--light-color);
+    border: 1px dashed var(--third-color);
     border-radius: 4px;
 
     &:hover {
-        border: 1px dashed $primary-color;
+        border: 1px dashed var(--primary-color);
     }
 
     &.is-dragover {
-        background: rgba($primary-color, 0.2);
-        border: 2px dashed $primary-color;
+        background: rgba(var(--primary-color), 0.2);
+        border: 2px dashed var(--primary-color);
     }
 }
 
@@ -210,7 +214,7 @@ defineExpose({
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-    border-bottom: 1px solid $third-color;
+    border-bottom: 1px solid var(--third-color);
 
     &:first-child {
         margin-top: 10px;
@@ -226,15 +230,15 @@ defineExpose({
             margin-right: 5px;
             width: 18px;
             height: 18px;
-            color: $secondary-color;
+            color: var(--secondary-color);
         }
     }
 
     .file-name-error {
-        color: $danger-color;
+        color: var(--danger-color);
 
         svg {
-            color: $danger-color;
+            color: var(--danger-color);
         }
     }
 
@@ -252,7 +256,7 @@ defineExpose({
     }
 
     &:hover {
-        background-color: darken($light-color, 5%);
+        background-color: darken(var(--light-color), 5%);
 
         .file-status {
             display: none;
@@ -268,17 +272,17 @@ defineExpose({
 
 .upload-list-uploading {
     .file-status {
-        color: $primary-color;
+        color: var(--primary-color);
     }
 }
 .upload-list-success {
     .file-status {
-        color: $success-color;
+        color: var(--success-color);
     }
 }
 .upload-list-error {
     .file-status {
-        color: $danger-color;
+        color: var(--danger-color);
     }
 }
 .is-dragover {

@@ -19,8 +19,12 @@ const props = withDefaults(defineProps<Partial<ToolTipsProps>>(), {
 });
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 .by-tooltips {
     display: inline-block;
     position: relative;
@@ -31,13 +35,13 @@ const props = withDefaults(defineProps<Partial<ToolTipsProps>>(), {
         top: -100%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: rgba($dark-color, 0.9);
-        color: $white-color;
+        background-color: rgba(var(--dark-color), 0.9);
+        color: var(--white-color);
         font-size: 12px;
         line-height: 1.5;
         padding: 10px;
         border-radius: 4px;
-        box-shadow: 0 0 10px rgba($dark-color, 0.25);
+        box-shadow: 0 0 10px rgba(var(--dark-color), 0.25);
         z-index: 1002;
     }
     .tip-raw {
@@ -49,7 +53,7 @@ const props = withDefaults(defineProps<Partial<ToolTipsProps>>(), {
         height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 6px solid rgba($dark-color, 0.9);
+        border-top: 6px solid rgba(var(--dark-color), 0.9);
     }
     .ele {
         position: relative;

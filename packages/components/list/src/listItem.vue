@@ -30,10 +30,14 @@ const props = withDefaults(defineProps<ListItemProps>(), {
 });
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 .is-disabled {
-    color: $primary-color;
+    color: var(--primary-color);
 }
 .by-list-item {
     box-sizing: border-box;
@@ -57,7 +61,7 @@ const props = withDefaults(defineProps<ListItemProps>(), {
                 font-size: 16px;
             }
             .content {
-                color: $secondary-color;
+                color: var(--secondary-color);
             }
         }
         .actions {
@@ -67,7 +71,7 @@ const props = withDefaults(defineProps<ListItemProps>(), {
             .action {
                 width: 50px;
                 text-align: center;
-                color: $primary-color;
+                color: var(--primary-color);
                 padding: 0 10px;
             }
         }

@@ -21,13 +21,17 @@ const handleClick = () => {
 };
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 
 .by-btn {
     position: relative;
     display: block;
-    color: $dark-color;
+    color: var(--dark-color);
     font-weight: 400;
     line-height: 1.5rem;
     white-space: nowrap;
@@ -36,8 +40,8 @@ const handleClick = () => {
     background-image: none;
     border: 1px solid transparent;
     box-shadow:
-        inset 0 1px 0 rgba($light-color, 0.15),
-        0 1px 1px rgba($light-color, 0.075);
+        inset 0 1px 0 rgba(var(--light-color), 0.15),
+        0 1px 1px rgba(var(--light-color), 0.075);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -52,125 +56,125 @@ const handleClick = () => {
             pointer-events: none;
         }
     }
-    transition: $btn-transition;
+    transition: var(--btn-transition);
 }
 .by-btn-default {
-    color: $primary-color;
-    background: $white-color;
-    border-color: $primary-color;
+    color: var(--primary-color);
+    background: var(--white-color);
+    border-color: var(--primary-color);
     &:hover {
-        color: $primary-color;
-        background: darken($white-color, 7.5%);
-        border-color: darken($primary-color, 10%);
+        color: var(--primary-color);
+        background: darken(var(--white-color), 7.5%);
+        border-color: darken(var(--primary-color), 10%);
         box-shadow:
-            inset 0 1px 0 rgba($primary-color, 0.15),
-            0 8px 8px rgba($primary-color, 0.075);
+            inset 0 1px 0 rgba(var(--primary-color), 0.15),
+            0 8px 8px rgba(var(--primary-color), 0.075);
     }
     &:active,
     &.active {
-        color: $primary-color;
-        background: darken($white-color, 5%);
-        border-color: darken($primary-color, 8%);
+        color: var(--primary-color);
+        background: darken(var(--white-color), 5%);
+        border-color: darken(var(--primary-color), 8%);
         box-shadow:
-            inset 0 2px 0 rgba($primary-color, 0.15),
-            0 5px 5px rgba($primary-color, 0.075);
+            inset 0 2px 0 rgba(var(--primary-color), 0.15),
+            0 5px 5px rgba(var(--primary-color), 0.075);
     }
     &:disabled,
     &.disabled {
-        color: $primary-color;
-        background: $white-color;
-        border-color: $primary-color;
+        color: var(--primary-color);
+        background: var(--white-color);
+        border-color: var(--primary-color);
     }
     &:hover {
-        background-color: $white-color;
+        background-color: var(--white-color);
     }
     &:active,
     &.active {
-        background-color: $white-color;
+        background-color: var(--white-color);
     }
 }
 .by-btn-primary {
-    color: $light-color;
-    background: $primary-color;
-    border-color: $primary-color;
+    color: var(--light-color);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
     &:hover {
-        color: $light-color;
-        background: darken($primary-color, 7.5%);
-        border-color: darken($primary-color, 10%);
+        color: var(--light-color);
+        background: darken(var(--primary-color), 7.5%);
+        border-color: darken(var(--primary-color), 10%);
         box-shadow:
-            inset 0 1px 0 rgba($light-color, 0.15),
-            0 8px 8px rgba($light-color, 0.075);
+            inset 0 1px 0 rgba(var(--light-color), 0.15),
+            0 8px 8px rgba(var(--light-color), 0.075);
     }
     &:active,
     &.active {
-        color: $light-color;
-        background: darken($primary-color, 5%);
-        border-color: darken($primary-color, 8%);
+        color: var(--light-color);
+        background: darken(var(--primary-color), 5%);
+        border-color: darken(var(--primary-color), 8%);
         box-shadow:
-            inset 0 2px 0 rgba($light-color, 0.15),
-            0 5px 5px rgba($light-color, 0.075);
+            inset 0 2px 0 rgba(var(--light-color), 0.15),
+            0 5px 5px rgba(var(--light-color), 0.075);
     }
     &:disabled,
     &.disabled {
-        color: $light-color;
-        background: $primary-color;
-        border-color: $primary-color;
+        color: var(--light-color);
+        background: var(--primary-color);
+        border-color: var(--primary-color);
     }
 }
 .by-btn-danger {
-    color: $light-color;
-    background: $danger-color;
-    border-color: $danger-color;
+    color: var(--light-color);
+    background: var(--danger-color);
+    border-color: var(--danger-color);
     &:hover {
-        color: $light-color;
-        background: darken($danger-color, 7.5%);
-        border-color: darken($danger-color, 10%);
+        color: var(--light-color);
+        background: darken(var(--danger-color), 7.5%);
+        border-color: darken(var(--danger-color), 10%);
         box-shadow:
-            inset 0 1px 0 rgba($light-color, 0.15),
-            0 8px 8px rgba($light-color, 0.075);
+            inset 0 1px 0 rgba(var(--light-color), 0.15),
+            0 8px 8px rgba(var(--light-color), 0.075);
     }
     &:active,
     &.active {
-        color: $light-color;
-        background: darken($danger-color, 5%);
-        border-color: darken($danger-color, 8%);
+        color: var(--light-color);
+        background: darken(var(--danger-color), 5%);
+        border-color: darken(var(--danger-color), 8%);
         box-shadow:
-            inset 0 2px 0 rgba($light-color, 0.15),
-            0 5px 5px rgba($light-color, 0.075);
+            inset 0 2px 0 rgba(var(--light-color), 0.15),
+            0 5px 5px rgba(var(--light-color), 0.075);
     }
     &:disabled,
     &.disabled {
-        color: $light-color;
-        background: $danger-color;
-        border-color: $danger-color;
+        color: var(--light-color);
+        background: var(--danger-color);
+        border-color: var(--danger-color);
     }
 }
 .by-btn-warn {
-    color: $light-color;
-    background: $warn-color;
-    border-color: $warn-color;
+    color: var(--light-color);
+    background: var(--warn-color);
+    border-color: var(--warn-color);
     &:hover {
-        color: $light-color;
-        background: darken($warn-color, 7.5%);
-        border-color: darken($warn-color, 10%);
+        color: var(--light-color);
+        background: darken(var(--warn-color), 7.5%);
+        border-color: darken(var(--warn-color), 10%);
         box-shadow:
-            inset 0 1px 0 rgba($light-color, 0.15),
-            0 8px 8px rgba($light-color, 0.075);
+            inset 0 1px 0 rgba(var(--light-color), 0.15),
+            0 8px 8px rgba(var(--light-color), 0.075);
     }
     &:active,
     &.active {
-        color: $light-color;
-        background: darken($warn-color, 5%);
-        border-color: darken($warn-color, 8%);
+        color: var(--light-color);
+        background: darken(var(--warn-color), 5%);
+        border-color: darken(var(--warn-color), 8%);
         box-shadow:
-            inset 0 2px 0 rgba($light-color, 0.15),
-            0 5px 5px rgba($light-color, 0.075);
+            inset 0 2px 0 rgba(var(--light-color), 0.15),
+            0 5px 5px rgba(var(--light-color), 0.075);
     }
     &:disabled,
     &.disabled {
-        color: $light-color;
-        background: $warn-color;
-        border-color: $warn-color;
+        color: var(--light-color);
+        background: var(--warn-color);
+        border-color: var(--warn-color);
     }
 }
 

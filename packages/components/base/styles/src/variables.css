@@ -1,0 +1,25 @@
+:root {
+    /* 默认色 */
+    --default-color: #f5f5f5;
+    /* 品牌色 */
+    --primary-color: #0d6efd;
+    /* 二级色 */
+    --secondary-color: #6c757da7;
+    /* 三级色 */
+    --third-color: #d0d8e2;
+    /* 成功色 */
+    --success-color: #52c41a;
+    /* 警告色 */
+    --warn-color: #f8da14;
+    /* 危险色 */
+    --danger-color: #dc3545;
+    /* 基础色 */
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --white-color: #ffffff;
+
+    --btn-transition:
+        color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    --input-transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}

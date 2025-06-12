@@ -36,8 +36,12 @@ const props = withDefaults(defineProps<InputProps>(), {
 });
 </script>
 
-<style scoped lang="scss">
-@import "../../base/styles/index.scss";
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
+@import "../../base/styles/index.css";
 .by-input-wrapper {
     position: relative;
     display: flex;
@@ -52,10 +56,10 @@ const props = withDefaults(defineProps<InputProps>(), {
         justify-content: center;
         width: 35px;
         height: 100%;
-        color: $light-color;
+        color: var(--light-color);
 
         svg {
-            color: $third-color;
+            color: var(--third-color);
         }
     }
 }
@@ -64,28 +68,28 @@ const props = withDefaults(defineProps<InputProps>(), {
     width: 100%;
     font-weight: 400;
     line-height: 1.5rem;
-    color: $secondary-color;
-    background-color: $white-color;
+    color: var(--secondary-color);
+    background-color: var(--white-color);
     background-clip: padding-box;
-    border: 1px solid $third-color;
-    box-shadow: 1px solid rgba($primary-color, 0.25);
+    border: 1px solid var(--third-color);
+    box-shadow: 1px solid rgba(var(--primary-color), 0.25);
     transition: $input-transition;
 
     &:focus {
-        color: $dark-color;
-        border-color: darken($primary-color, 10%);
+        color: var(--dark-color);
+        border-color: darken(var(--primary-color), 10%);
         outline: 0;
-        box-shadow: 0 0 0 1px rgba($primary-color, 0.25);
+        box-shadow: 0 0 0 1px rgba(var(--primary-color), 0.25);
     }
 
     &::placeholder {
-        color: $third-color;
+        color: var(--third-color);
         opacity: 1;
     }
 
     &:disabled,
     &[readonly] {
-        background-color: $light-color;
+        background-color: var(--light-color);
         border-color: null;
         opacity: 1;
     }
@@ -114,11 +118,11 @@ const props = withDefaults(defineProps<InputProps>(), {
     font-size: 14px;
     line-height: 1.5rem;
     font-weight: 400;
-    color: $dark-color;
+    color: var(--dark-color);
     text-align: center;
     white-space: nowrap;
-    background-color: $light-color;
-    border: 1px solid $third-color;
+    background-color: var(--light-color);
+    border: 1px solid var(--third-color);
 }
 .input-group > .input-group-prepend,
 .input-group.input-group-append > .input-inner {

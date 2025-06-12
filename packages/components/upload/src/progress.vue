@@ -21,7 +21,11 @@ interface ProgressProps {
 const props = defineProps<ProgressProps>();
 </script>
 
-<style scoped lang="scss">
+<style>
+@import "../../base/styles/index.css"; /* 全局样式 */
+</style>
+
+<style scoped>
 .progress-bar {
     box-sizing: border-box;
     width: 100%;
