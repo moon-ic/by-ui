@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ButtonProps } from "./src/props";
+import { ButtonProps } from "./props";
 const props = withDefaults(defineProps<ButtonProps>(), {
     type: "primary",
     size: "medium",
@@ -22,7 +22,7 @@ const handleClick = () => {
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 
 .by-btn {
     position: relative;

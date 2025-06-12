@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-import { openDialog, Button } from "@by-ui/components";
-
+import { Button } from "@by-ui/components/button";
+import { openDialog } from "@by-ui/components/dialog";
 const visible = () =>
     openDialog("提示内容", {
         header: "提示",

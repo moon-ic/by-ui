@@ -6,6 +6,6 @@
     </div>
 </template>
 <script setup>
-import { Avatar } from "@by-ui/components";
+import { Avatar } from "@by-ui/components/avatar";
 import Icon from "../../../../packages/components/base/assets/svg/info.vue";
 </script>

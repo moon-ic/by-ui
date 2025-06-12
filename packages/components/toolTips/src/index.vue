@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { ToolTipsProps } from "./src/props";
+import { ToolTipsProps } from "./props";
 const props = withDefaults(defineProps<Partial<ToolTipsProps>>(), {
     triggerElement: "hover",
     theme: "dark",
@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<Partial<ToolTipsProps>>(), {
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 .by-tooltips {
     display: inline-block;
     position: relative;

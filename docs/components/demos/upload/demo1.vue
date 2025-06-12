@@ -6,5 +6,6 @@
     </div>
 </template>
 <script setup>
-import { Upload, Button } from "@by-ui/components";
+import { Button } from "@by-ui/components/button";
+import { Upload } from "@by-ui/components/upload";
 </script>

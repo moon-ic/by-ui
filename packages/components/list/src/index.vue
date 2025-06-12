@@ -22,8 +22,8 @@
 </template>
 
 <script setup lang="ts">
-import listItem from "./src/listItem.vue";
-import { ListProps } from "./src/props";
+import listItem from "./listItem.vue";
+import { ListProps } from "./prop";
 
 const props = withDefaults(defineProps<ListProps>(), {
     height: "auto"
@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<ListProps>(), {
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 .by-list {
     display: flex;
     flex-direction: column;

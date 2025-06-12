@@ -1,6 +1,6 @@
 <template>
     <div class="button-demo">
-        <Button type="default" @click="handleClick">Click Me</Button>
+        <by-button type="default" @click="handleClick">Click Me</by-button>
         <Button @click="handleClick">Primary</Button>
         <Button type="warn" @click="handleClick">Delete</Button>
         <Button type="danger" @click="handleClick">Delete</Button>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import { Button } from "@by-ui/components";
+import { Button } from "@by-ui/components/button";
 const handleClick = (event) => {
     console.log("Button clicked!", event);
 };

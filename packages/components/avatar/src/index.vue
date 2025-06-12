@@ -8,11 +8,11 @@
 </template>
 
 <script setup lang="ts">
-import { AvatarProps } from "./src/props";
+import { AvatarProps } from "./props";
 
 const props = defineProps<AvatarProps>();
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 </style>

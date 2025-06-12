@@ -24,15 +24,15 @@
 </template>
 
 <script setup lang="ts">
-import { DialogProps } from "./src/prop";
+import { DialogProps } from "./prop";
 
-import IconInfo from "../base/assets/svg/info.vue";
-import IconClose from "../base/assets/svg/close.vue";
-import IconWarning from "../base/assets/svg/warning.vue";
-import IconSuccess from "../base/assets/svg/success.vue";
-import IconError from "../base/assets/svg/error.vue";
+import IconInfo from "../../base/assets/svg/info.vue";
+import IconClose from "../../base/assets/svg/close.vue";
+import IconWarning from "../../base/assets/svg/warning.vue";
+import IconSuccess from "../../base/assets/svg/success.vue";
+import IconError from "../../base/assets/svg/error.vue";
 
-import Button from "../button/index.vue";
+import { Button } from "../../button/index";
 
 const props = withDefaults(defineProps<DialogProps>(), {
     type: "default",
@@ -55,7 +55,7 @@ const close = () => {
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 
 .by-dialog {
     position: fixed;

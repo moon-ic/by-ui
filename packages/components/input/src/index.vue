@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
 import { readonly } from "vue";
-import { InputProps } from "./src/prop";
+import { InputProps } from "./prop";
 const props = withDefaults(defineProps<InputProps>(), {
     status: "default",
     size: "small",
@@ -37,7 +37,7 @@ const props = withDefaults(defineProps<InputProps>(), {
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 .by-input-wrapper {
     position: relative;
     display: flex;

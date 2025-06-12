@@ -6,7 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import { ToolTips, Button } from "@by-ui/components";
+import { ToolTips } from "@by-ui/components/tooltips";
+import { Button } from "@by-ui/components/button";
 </script>
 
 <style scoped lang="scss">

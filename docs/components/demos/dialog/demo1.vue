@@ -8,8 +8,8 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import { Button } from "@by-ui/components";
-import { Dialog } from "@by-ui/components";
+import { Button } from "@by-ui/components/button";
+import { Dialog } from "@by-ui/components/dialog";
 
 const visible1 = ref(false);
 </script>

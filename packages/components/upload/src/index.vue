@@ -4,7 +4,7 @@
             <Dragger v-if="drag" :onFile="uploadFile">
                 <slot></slot>
             </Dragger>
-            <div v-else >
+            <div v-else>
                 <slot></slot>
             </div>
             <input
@@ -39,16 +39,16 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import type { UploadFile } from "./src/props";
-import { UploadProps } from "./src/props";
+import type { UploadFile } from "./props";
+import { UploadProps } from "./props";
 
-import IconClose from "../base/assets/svg/close.vue";
-import IconInfo from "../base/assets/svg/info.vue";
-import IconSuccess from "../base/assets/svg/success.vue";
-import IconError from "../base/assets/svg/error.vue";
-import IconLoading from "../base/assets/svg/loading.vue";
-import Dragger from "./src/dragger.vue";
-import progress from "./src/progress.vue";
+import IconClose from "../../base/assets/svg/close.vue";
+import IconInfo from "../../base/assets/svg/info.vue";
+import IconSuccess from "../../base/assets/svg/success.vue";
+import IconError from "../../base/assets/svg/error.vue";
+import IconLoading from "../../base/assets/svg/loading.vue";
+import Dragger from "./dragger.vue";
+import progress from "./progress.vue";
 
 import axios from "axios";
 
@@ -168,7 +168,7 @@ defineExpose({
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 .by-upload {
     width: 100%;
     min-width: 350px;

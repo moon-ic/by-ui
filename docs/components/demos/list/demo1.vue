@@ -2,8 +2,8 @@
     <List :lists="listItems" :header="'11'" :footer="'121'" height="400px" :split="true" :zebra="true"></List>
 </template>
 <script setup lang="ts">
-import { List } from "@by-ui/components";
-import { ListItemProps } from "@by-ui/components/list/src/props";
+import { List } from "@by-ui/components/list";
+import type { ListItemProps } from "@by-ui/components/list";
 export interface ListActionProps {
     text: string;
     onClick?: Function;

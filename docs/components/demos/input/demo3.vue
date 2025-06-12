@@ -6,7 +6,7 @@
     </div>
 </template>
 <script setup>
-import { Input } from "@by-ui/components";
+import { Input } from "@by-ui/components/input";
 </script>
 <style>
 .button-demo Input {

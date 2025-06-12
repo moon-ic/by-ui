@@ -13,8 +13,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { TabProps } from "./src/props";
-import Tab from "./src/tabPanel.vue";
+import { TabProps } from "./props";
+import Tab from "./tabPanel.vue";
 
 const props = withDefaults(defineProps<TabProps>(), {});
 const active = ref(props.defaultActive);
@@ -27,5 +27,5 @@ const handleClick = (index: number) => {
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 </style>

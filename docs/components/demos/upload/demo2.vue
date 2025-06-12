@@ -6,7 +6,7 @@
     </div>
 </template>
 <script setup>
-import { Upload } from "@by-ui/components";
+import { Upload } from "@by-ui/components/upload";
 </script>
 <style>
 .test {

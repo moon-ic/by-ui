@@ -2,7 +2,7 @@
     <Tabs :list="tabPanels" :defaultActive="0"></Tabs>
 </template>
 <script setup lang="ts">
-import { Tabs } from "@by-ui/components";
+import { Tabs } from "@by-ui/components/tabs";
 const tabPanels = [
     { label: "Tab 0", disabled: false, key: 0 },
     { label: "Tab 1", disabled: false, key: 1 },

@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import { ListItemProps } from "./props";
+import { ListItemProps } from "./prop";
 const props = withDefaults(defineProps<ListItemProps>(), {
     disabled: false
 });

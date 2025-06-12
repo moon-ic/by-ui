@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from "vue";
-import { ToastProps } from "./src/props";
+import { ToastProps } from "./props";
 
 const props = withDefaults(defineProps<Partial<ToastProps>>(), {
     theme: "primary",
@@ -30,5 +30,5 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped lang="scss">
-@import "../base/styles/index.scss";
+@import "../../base/styles/index.scss";
 </style>
