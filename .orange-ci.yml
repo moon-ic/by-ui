@@ -1,0 +1,27 @@
+stages:
+  - update
+
+update_version:
+  stage: update
+  image: node:18
+  script:
+    - |
+      echo "读取当前版本号"
+      VERSION=$(jq -r '.version' package.json)
+      echo "当前版本号: $VERSION"
+
+      echo "递增 patch 版本号"
+      NEW_VERSION=$(echo $VERSION | awk -F. '{$NF += 1; OFS="."; print}')
+      echo "新版本号: $NEW_VERSION"
+
+      echo "写入新版本号"
+      jq ".version = \"$NEW_VERSION\"" package.json > tmp.json && mv tmp.json package.json
+
+      echo "配置 Git 用户"
+      git config user.name "ci-bot"
+      git config user.email "ci-bot@example.com"
+
+      echo "提交更改并推送"
+      git add package.json
+      git commit -m "chore: bump version to $NEW_VERSION"
+      git push origin HEAD:$CI_COMMIT_REF_NAME
