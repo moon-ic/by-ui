@@ -1,8 +1,8 @@
 stages:
-  - update
+  - api_trigger
 
 update_version:
-  stage: update
+  stage: api_trigger
   image: node:18
   script:
     - |
