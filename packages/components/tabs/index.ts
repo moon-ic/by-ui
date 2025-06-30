@@ -8,4 +8,4 @@ export const TabsPlugin = {
 };
 
 export { Tabs };
-export type { TabProps } from "./src/props";
+export type { TabItem, TabsProps, TabsEmits } from "./src/props";

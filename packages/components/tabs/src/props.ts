@@ -1,25 +1,32 @@
-type handleSelect = (selectIndex: number) => void;
-export interface TabPanelProps {
-    key?: number;
-    isActive?: boolean;
-    label?: string;
+export type TabPosition = "top" | "bottom" | "left" | "right";
+export type TabType = "line" | "card";
+export type IndicatorAlign = "start" | "center" | "end";
+
+export interface TabItem {
+    id: string;
+    label: string;
+    icon?: string;
     disabled?: boolean;
-    removeble?: boolean;
-    onRemove?: () => void;
-    panel?: any;
-    lazy?: boolean;
+    closable?: boolean;
+    [key: string]: any;
+}
+
+export interface TabsProps {
+    modelValue: string;
+    items: TabItem[];
+    type?: TabType;
+    position?: TabPosition;
+    centered?: boolean;
+    indicator?: boolean;
+    indicatorWidth?: number | string;
+    indicatorAlign?: IndicatorAlign;
+    addable?: boolean;
     draggable?: boolean;
 }
-export interface TabProps {
-    list?: TabPanelProps[];
-    defaultActive?: number;
-    size?: string;
-    placement?: "left" | "right" | "top" | "bottom";
-    theme?: "card" | "line";
-    dragSort?: boolean;
-    onSelect?: handleSelect;
-    onAdd?: () => void;
-    onChange?: (index: number) => void;
-    oDragSort?: (dragIndex: number, hoverIndex: number) => void;
-    onRemove?: (index: number) => void;
+
+export interface TabsEmits {
+    (e: "update:modelValue", id: string): void;
+    (e: "add"): void;
+    (e: "remove", id: string): void;
+    (e: "change", newItems: TabItem[]): void;
 }

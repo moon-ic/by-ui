@@ -4,10 +4,13 @@
         <!-- <DialogDemo1 /> -->
         <!-- <DialogDemo2 /> -->
         <!-- <InputDemo1 /> -->
-        <!-- <TabsDemo1 /> -->
+        <TabsDemo1 />
+        <TabsDemo2 />
+        <TabsDemo3 />
+        <TabsDemo4 />
         <!-- <UploadDemo1 /> -->
         <!-- <UploadDemo2 /> -->
-        <AvatarDemo1 />
+        <!-- <AvatarDemo1 /> -->
         <!-- <ListDemo1 /> -->
         <!-- <ToastDemo1 /> -->
         <!-- <TooltipsDemo1 /> -->
@@ -24,6 +27,9 @@ import UploadDemo1 from "./upload/demo1.vue";
 import UploadDemo2 from "./upload/demo2.vue";
 import AvatarDemo1 from "./avatar/demo1.vue";
 import TabsDemo1 from "./tabs/demo1.vue";
+import TabsDemo2 from "./tabs/demo2.vue";
+import TabsDemo3 from "./tabs/demo3.vue";
+import TabsDemo4 from "./tabs/demo4.vue";
 import ToastDemo1 from "./toast/demo1.vue";
 import TooltipsDemo1 from "./tooltips/demo1.vue";
 </script>
