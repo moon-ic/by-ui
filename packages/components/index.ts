@@ -7,7 +7,7 @@ import { UploadPlugin } from "./upload";
 import { AvatarPlugin } from "./avatar";
 import { TabsPlugin } from "./tabs";
 import { ToastPlugin } from "./toast";
-import { ToolTipsPlugin } from "./toolTips";
+import { TooltipPlugin } from "./toolTip";
 
 export const ByUI = {
     ButtonPlugin,
@@ -18,5 +18,5 @@ export const ByUI = {
     AvatarPlugin,
     TabsPlugin,
     ToastPlugin,
-    ToolTipsPlugin
+    TooltipPlugin
 };

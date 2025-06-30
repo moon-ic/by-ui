@@ -4,16 +4,16 @@
         <!-- <DialogDemo1 /> -->
         <!-- <DialogDemo2 /> -->
         <!-- <InputDemo1 /> -->
-        <TabsDemo1 />
-        <TabsDemo2 />
-        <TabsDemo3 />
-        <TabsDemo4 />
+        <!-- <TabsDemo1 /> -->
+        <!-- <TabsDemo2 /> -->
+        <!-- <TabsDemo3 /> -->
+        <!-- <TabsDemo4 /> -->
         <!-- <UploadDemo1 /> -->
         <!-- <UploadDemo2 /> -->
         <!-- <AvatarDemo1 /> -->
         <!-- <ListDemo1 /> -->
         <!-- <ToastDemo1 /> -->
-        <!-- <TooltipsDemo1 /> -->
+        <TooltipsDemo1 />
     </div>
 </template>
 
@@ -31,10 +31,6 @@ import TabsDemo2 from "./tabs/demo2.vue";
 import TabsDemo3 from "./tabs/demo3.vue";
 import TabsDemo4 from "./tabs/demo4.vue";
 import ToastDemo1 from "./toast/demo1.vue";
-import TooltipsDemo1 from "./tooltips/demo1.vue";
+import TooltipsDemo1 from "./toolTips/demo1.vue";
 </script>
-<style scoped>
-#app {
-    overflow: hidden;
-}
-</style>
+<style scoped></style>
