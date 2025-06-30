@@ -2,7 +2,7 @@
     <!-- 模板部分保持不变 -->
     <div
         class="avatar"
-        :class="[`avatar-${size}`, `avatar-${shape}`, { 'has-badge': badge && badge > 0 }]"
+        :class="[`avatar-${size}`, `avatar-${shape}`, { 'has-badge': badge }]"
         :style="{
             backgroundColor: bgColor,
             color: textColor
@@ -18,7 +18,7 @@
         <span v-else class="avatar-text" :style="textStyle">{{ displayText }}</span>
 
         <!-- 徽标 -->
-        <span v-if="badge && badge > 0" class="avatar-badge">{{ badge }}</span>
+        <span v-if="badge && Number(badge) > 0" class="avatar-badge">{{ badge }}</span>
     </div>
 </template>
 
