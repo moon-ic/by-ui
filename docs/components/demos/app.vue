@@ -1,13 +1,13 @@
 <template>
     <div id="app">
-        <ButtonDemo1 />
+        <!-- <ButtonDemo1 /> -->
         <!-- <DialogDemo1 /> -->
         <!-- <DialogDemo2 /> -->
         <!-- <InputDemo1 /> -->
         <!-- <TabsDemo1 /> -->
         <!-- <UploadDemo1 /> -->
         <!-- <UploadDemo2 /> -->
-        <!-- <AvatarDemo1 /> -->
+        <AvatarDemo1 />
         <!-- <ListDemo1 /> -->
         <!-- <ToastDemo1 /> -->
         <!-- <TooltipsDemo1 /> -->
