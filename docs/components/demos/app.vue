@@ -11,9 +11,10 @@
         <!-- <UploadDemo1 /> -->
         <!-- <UploadDemo2 /> -->
         <!-- <AvatarDemo1 /> -->
+        <AvatarDemo2 />
         <!-- <ListDemo1 /> -->
         <!-- <ToastDemo1 /> -->
-        <TooltipsDemo1 />
+        <!-- <TooltipsDemo1 /> -->
     </div>
 </template>
 
@@ -26,6 +27,7 @@ import ListDemo1 from "./list/demo1.vue";
 import UploadDemo1 from "./upload/demo1.vue";
 import UploadDemo2 from "./upload/demo2.vue";
 import AvatarDemo1 from "./avatar/demo1.vue";
+import AvatarDemo2 from "./avatar/demo2.vue";
 import TabsDemo1 from "./tabs/demo1.vue";
 import TabsDemo2 from "./tabs/demo2.vue";
 import TabsDemo3 from "./tabs/demo3.vue";

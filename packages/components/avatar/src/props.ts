@@ -1,33 +1,22 @@
-// src/types/components/avatar.ts
+import type { PropType } from "vue";
+
 export type AvatarSize = "small" | "medium" | "large";
 export type AvatarShape = "circle" | "square";
 
 export interface AvatarProps {
-    // 基本属性
     size?: AvatarSize;
     shape?: AvatarShape;
-
-    // 图片类型
     src?: string;
     alt?: string;
-
-    // 图标类型
     icon?: string;
-
-    // 字符类型
     text?: string;
     gap?: number;
     maxChars?: number;
-
-    // 颜色
     bgColor?: string;
     textColor?: string;
-
-    // 徽标
-    badge?: number;
+    badge?: number | string;
 }
 
-// 默认 props 值
 export const avatarPropsDefaults: Partial<AvatarProps> = {
     size: "medium",
     shape: "circle",
@@ -37,3 +26,27 @@ export const avatarPropsDefaults: Partial<AvatarProps> = {
     textColor: "#fff",
     badge: 0
 };
+
+export interface AvatarItem {
+    src?: string;
+    text?: string;
+    icon?: string;
+    key?: string | number;
+    class?: string;
+    // 继承AvatarProps的可选属性
+    size?: AvatarSize;
+    shape?: AvatarShape;
+    gap?: number;
+    bgColor?: string;
+    textColor?: string;
+}
+export interface AvatarGroupProps {
+    avatars?: AvatarItem[];
+    maxCount?: number;
+    size?: AvatarSize;
+    shape?: AvatarShape;
+    spacing?: number;
+    overlap?: number;
+    bgColor?: string;
+    textColor?: string;
+}
