@@ -11,8 +11,8 @@
         <!-- <UploadDemo1 /> -->
         <!-- <UploadDemo2 /> -->
         <!-- <AvatarDemo1 /> -->
-        <AvatarDemo2 />
-        <!-- <ListDemo1 /> -->
+        <!-- <AvatarDemo2 /> -->
+        <ListDemo1 />
         <!-- <ToastDemo1 /> -->
         <!-- <TooltipsDemo1 /> -->
     </div>
